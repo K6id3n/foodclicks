@@ -31,6 +31,8 @@ function addAdd() {
 
             button.classList.add("hide");
 
+            alert("Upgrade Purchased!");
+
     }
 
 }
@@ -56,6 +58,8 @@ function addAddDos() {
 
             buttonDos.classList.add("hide");
 
+            alert("Upgrade Purchased!");
+
     }
 
 }
@@ -79,6 +83,8 @@ function addAddThr() {
             let buttonThr = document.getElementById("upgradeBut3");
 
             buttonThr.classList.add("hide");
+
+            alert("Upgrade Purchased!");
 
     }
 
