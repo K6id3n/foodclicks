@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Clicks</title>
+    <title>Bot Clicks</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
@@ -14,7 +14,7 @@
     <nav>
 
         <h1>
-            Food Clicks
+            Bot Clicks
         </h1>
 
     </nav>
@@ -23,8 +23,12 @@
 
         <section class="mltcounter">
 
-            <h2 id="multCount">1</h2>
-            <h2>x</h2>
+            <section class="mltcont">
+                <h2 id="multCount" class="multiboxh">1</h2>
+                <h2 class="multiboxh">x</h2>
+            </section>
+
+            <h2 class="multiboxh">Multiplier</h2>
 
         </section>
 
@@ -39,7 +43,22 @@
 
         </section>
 
-        <section class="mltcounter">
+        <section class="botcont">
+
+            <section class="botcounter">
+                <p>Bot 1 Count:</p>
+                <p id="botCount">0</p>
+            </section>
+
+            <section class="botcounter">
+                <p>Bot 2 Count:</p>
+                <p id="botCountDos">0</p>
+            </section>
+
+            <section class="botcounter">
+                <p>Bot 3 Count:</p>
+                <p id="botCountThr">0</p>
+            </section>
 
         </section>
 
@@ -50,19 +69,28 @@
         <section class="mlt">
 
             <button onclick="addAdd()" id="upgradeBut">2x Multiplier price: $25</button>
-            <button onclick="addAddDos()" id="upgradeBut2">2x Multiplier price: $50</button>
-            <button onclick="addAddThr()" id="upgradeBut3">2x Multiplier price: $100</button>
+            <button onclick="addAddDos()" id="upgradeBut2">2x Multiplier price: $150</button>
+            <button onclick="addAddThr()" id="upgradeBut3">2x Multiplier price: $500</button>
 
         </section>
 
         <section class="bots">
 
-            <button onclick="buyObj()" id="botBut">Bot: price: $500</button>
-            <button onclick="buyObjDos()" id="botButDos">Bot: price: $5,000</button>
-            <button onclick="buyObjThr()" id="botButThr">Bot: price: $10,000</button>
+            <button onclick="buyObj()" id="botBut" class="botbut">Bot 1: price: $<p id="objPrice" class="price">500</p>
+            </button>
+            <button onclick="buyObjDos()" id="botButDos" class="botbut">Bot 2: price: $<p id="objPriceDos"
+                    class="price">5,000</p></button>
+            <button onclick="buyObjThr()" id="botButThr" class="botbut">Bot 3: price: $<p id="objPriceThr"
+                    class="price">10,000</p></button>
 
         </section>
 
+    </section>
+
+    <section class="achievements">
+
+        <h2>Achievements</h2>
+        <p id="oneMil"></p>
     </section>
 
     <footer>

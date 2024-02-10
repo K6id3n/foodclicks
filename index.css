@@ -43,12 +43,45 @@ h1{
 .mltcounter{
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     border: 2px solid black;
     width: 10dvw;
     height: 20dvh;
-    font-size: 300%;
+    font-size: x-large;
+
+}  
+
+.mltcont{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.multiboxh{
+
+    margin: 0%;
+
+}
+
+.botcont{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    width: 10dvw;
+    height: 20dvh;
+
+}
+
+.botcounter{
+
+    display: flex;
+    flex-direction: row;
 
 }
 
@@ -108,6 +141,32 @@ button{
     width: 20dvw;
     height: 15dvh;
     border: 2px solid black;
+
+}
+
+.price {
+
+    margin: 0px;
+
+}
+
+.botbut{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.achievements{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20dvw;
+    height: 15dvh;
+    border: 2px solid black;
+    margin-top: 1dvh;
 
 }
 

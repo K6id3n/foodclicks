@@ -10,7 +10,44 @@ function addCount() {
 
 }
 
+//achivements
+
+function achivementsOneMillion() {
+
+    if(finalCount >= 1000000) {
+
+        alert("Congrats on one million!")
+
+        clearInterval(milInterval)
+
+        var outPutElement = document.getElementById("oneMil");
+        outPutElement.textContent = ("One Million")
+
+        countAdd *= 10;
+
+        var outPutElement = document.getElementById("multCount");
+        outPutElement.textContent = (countAdd)
+
+        setInterval(oneMilObj, 100)
+
+    }
+
+}
+
+function oneMilObj() {
+
+    finalCount += 10000;
+
+    var outPutElement = document.getElementById("final");
+    outPutElement.textContent = (finalCount)
+
+}
+
+const milInterval = setInterval(achivementsOneMillion, 100)
+
 //multipliers
+
+//mlt1
 
 function addAdd() {
 
@@ -42,20 +79,21 @@ function addAdd() {
 
 }
 
+//mlt2
 
 function addAddDos() {
 
-    if (finalCount < 50) {
+    if (finalCount < 150) {
 
         alert("Insuficient Funds")
 
     }
 
-    if (!(finalCount < 50)) {
+    if (!(finalCount < 150)) {
 
-        countAdd *= 2;
+        countAdd *= 4;
 
-        finalCount -= 50;
+        finalCount -= 150;
 
         var outPutElement = document.getElementById("final");
         outPutElement.textContent = (finalCount)
@@ -73,19 +111,21 @@ function addAddDos() {
 
 }
 
+//mlt3
+
 function addAddThr() {
 
-    if (finalCount < 100) {
+    if (finalCount < 500) {
 
         alert("Insuficient Funds")
 
     }
 
-    if (!(finalCount < 100)) {
+    if (!(finalCount < 500)) {
 
-        countAdd *= 2;
+        countAdd *= 10;
 
-        finalCount -= 100;
+        finalCount -= 500;
 
         var outPutElement = document.getElementById("final");
         outPutElement.textContent = (finalCount)
@@ -104,65 +144,106 @@ function addAddThr() {
 }
 
 //objects
+
+let objPrice = 500;
+
+let objPriceDos = 5000;
+
+let objPriceThr = 10000;
+
+let botCount = 0;
+
+let botCountDos = 0;
+
+let botCountThr = 0;
+
+//obj1
+
 function buyObj() {
 
-    if (finalCount < 500) {
+    if (finalCount < objPrice) {
 
         alert("Insuficient Funds")
 
     }
 
-    if (!(finalCount < 500)) {
+    if (!(finalCount < objPrice)) {
 
-        finalCount -= 500;
-
-        let buttonBot = document.getElementById("botBut");
+        finalCount -= objPrice;
 
         setInterval(buyObjAdd, 1000);
 
-        alert("Bot Purchased!");
+        objPrice  += 100;
 
-        buttonBot.classList.add("hide");
+        var outPutElement = document.getElementById("objPrice");
+        outPutElement.textContent = (objPrice)
+        
+        botCount += 1;
+
+        var outPutElement = document.getElementById("botCount");
+        outPutElement.textContent = (botCount)
+
+        alert("Bot Purchased!");
 
     }
 
+    if (objPrice >= 1500) {
 
+        alert("Bot Maxed Out!")
+
+        document.getElementById("botBut").style.display = "none";
+
+    }
 
 }
 
 
 function buyObjAdd() {
 
-    finalCount += 10;
+    finalCount += 50;
 
     var outPutElement = document.getElementById("final");
     outPutElement.textContent = (finalCount)
 
 }
 
+//obj2
+
 function buyObjDos() {
 
-    if (finalCount < 5000) {
+    if (finalCount < objPriceDos) {
 
         alert("Insuficient Funds")
 
     }
 
-    if (!(finalCount < 5000)) {
+    if (!(finalCount < objPriceDos)) {
 
-        finalCount -= 5000;
-
-        let buttonBotDos = document.getElementById("botButDos");
+        finalCount -= objPriceDos;
 
         setInterval(buyObjDosAdd, 1000);
 
-        alert("Upgrade Purchased!");
+        objPriceDos  += 1000;
+        
+        var outPutElement = document.getElementById("objPriceDos");
+        outPutElement.textContent = (objPriceDos)
 
-        buttonBotDos.classList.add("hide");
+        botCountDos += 1;
+
+        var outPutElement = document.getElementById("botCountDos");
+        outPutElement.textContent = (botCountDos)
+
+        alert("Upgrade Purchased!");
 
     }
 
+    if (objPriceDos >= 10000) {
 
+        alert("Bot Maxed Out!")
+
+        document.getElementById("botButDos").style.display = "none";
+
+    }
 
 }
 
@@ -176,28 +257,43 @@ function buyObjDosAdd() {
 
 }
 
+//obj3
+
 function buyObjThr() {
 
-    if (finalCount < 10000) {
+    if (finalCount < objPriceThr) {
 
         alert("Insuficient Funds")
 
     }    
 
-    if (!(finalCount < 10000)) {
+    if (!(finalCount < objPriceThr)) {
 
-        finalCount -= 10000;
-
-        let buttonBotThr = document.getElementById("botButThr");
+        finalCount -= objPriceThr;
 
         setInterval(buyObjThrAdd, 1000);
 
-        alert("Upgrade Purchased!");
+        objPriceThr  += 5000;
+        
+        var outPutElement = document.getElementById("objPriceThr");
+        outPutElement.textContent = (objPriceThr)
 
-        buttonBotThr.classList.add("hide");
+        botCountThr += 1;
+
+        var outPutElement = document.getElementById("botCountThr");
+        outPutElement.textContent = (botCountThr)
+
+        alert("Upgrade Purchased!");
 
     }
 
+    if (objPriceThr >= 60000) {
+
+        alert("Bot Maxed Out!")
+
+        document.getElementById("botButThr").style.display = "none";
+
+    }
 
 
 }
