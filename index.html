@@ -11,21 +11,65 @@
 
 <body>
 
-    <section class="balancecont">
-        <h2>$</h2>
-        <h2 class="balance" id="final">0</h2>
+    <nav>
+
+        <h1>
+            Food Clicks
+        </h1>
+
+    </nav>
+
+    <section class="toprow">
+
+        <section class="mltcounter">
+
+            <h2 id="multCount">1</h2>
+            <h2>x</h2>
+
+        </section>
+
+        <section class="counter">
+
+            <section class="balancecont">
+                <h2>$</h2>
+                <h2 class="balance" id="final">0</h2>
+            </section>
+
+            <button onclick="addCount()">Add One</button>
+
+        </section>
+
+        <section class="mltcounter">
+
+        </section>
+
     </section>
 
-    <button onclick="addCount()">Add One</button>
+    <section class="mbrow">
 
-    <button onclick="addAdd()" id="upgradeBut">2x Multiplier price: 25$</button>
-    <button onclick="addAddDos()" id="upgradeBut2">2x Multiplier price: 50$</button>
-    <button onclick="addAddThr()" id="upgradeBut3">2x Multiplier price: 100$</button>
+        <section class="mlt">
 
-    <button onclick="buyObj()" id="botBut">Bot: price: 500$</button>
-    <button onclick="buyObjDos()" id="botButDos">Bot: price: 5,000$</button>
-    <button onclick="buyObjThr()" id="botButThr">Bot: price: 10,000$</button>
+            <button onclick="addAdd()" id="upgradeBut">2x Multiplier price: $25</button>
+            <button onclick="addAddDos()" id="upgradeBut2">2x Multiplier price: $50</button>
+            <button onclick="addAddThr()" id="upgradeBut3">2x Multiplier price: $100</button>
 
+        </section>
+
+        <section class="bots">
+
+            <button onclick="buyObj()" id="botBut">Bot: price: $500</button>
+            <button onclick="buyObjDos()" id="botButDos">Bot: price: $5,000</button>
+            <button onclick="buyObjThr()" id="botButThr">Bot: price: $10,000</button>
+
+        </section>
+
+    </section>
+
+    <footer>
+
+        <p>Donate!</p>
+
+    </footer>
 
 </body>
 

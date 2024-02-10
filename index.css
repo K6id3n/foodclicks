@@ -9,7 +9,46 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: radial-gradient(white, black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+
+}
+
+nav{
+
+    background-color: black;
+    width: 100%;
+    color: white;
+
+}
+
+h1{
+
+    padding-left: 1dvw;
+
+}
+
+.toprow{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50dvw;
     margin-top: 20dvh;
+
+}
+
+.mltcounter{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid black;
+    width: 10dvw;
+    height: 20dvh;
+    font-size: 300%;
 
 }
 
@@ -17,12 +56,63 @@ body{
 
     display: flex;
     flex-direction: row;
+    justify-content: center;
     font-size: xx-large;
+
+}
+
+.counter{
+
+    border: 2px solid black;
+    width: 20dvw;
+    height: 20dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1dvh;
 
 }
 
 button{
 
-    font-size: xx-large;
+    font-size: large;
     margin: .5dvw;
+
+}
+
+.mbrow{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 59.6dvw;
+
+}
+
+.mlt{
+
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    width: 20dvw;
+    height: 15dvh;
+    border: 2px solid black;
+
+}
+
+.bots{
+
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 20dvw;
+    height: 15dvh;
+    border: 2px solid black;
+
+}
+
+footer{
+
+    margin-top: 100dvh;
+
 }

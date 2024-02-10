@@ -1,7 +1,6 @@
 //world values
 let finalCount = 0
-let countAdd = 10
-
+let countAdd = 1
 function addCount() {
 
     finalCount += countAdd;
@@ -29,6 +28,9 @@ function addAdd() {
 
         var outPutElement = document.getElementById("final");
         outPutElement.textContent = (finalCount)
+
+        var outPutElement = document.getElementById("multCount");
+        outPutElement.textContent = (countAdd)
 
         let button = document.getElementById("upgradeBut");
 
@@ -58,6 +60,9 @@ function addAddDos() {
         var outPutElement = document.getElementById("final");
         outPutElement.textContent = (finalCount)
 
+        var outPutElement = document.getElementById("multCount");
+        outPutElement.textContent = (countAdd)
+
         let buttonDos = document.getElementById("upgradeBut2");
 
         buttonDos.classList.add("hide");
@@ -84,6 +89,9 @@ function addAddThr() {
 
         var outPutElement = document.getElementById("final");
         outPutElement.textContent = (finalCount)
+
+        var outPutElement = document.getElementById("multCount");
+        outPutElement.textContent = (countAdd)
 
         let buttonThr = document.getElementById("upgradeBut3");
 
