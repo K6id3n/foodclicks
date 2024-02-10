@@ -1,6 +1,6 @@
 //world values
 let finalCount = 0
-let countAdd = 1
+let countAdd = 100
 
 function addCount() {
 
@@ -104,11 +104,11 @@ function buyObj() {
 
         let buttonBot = document.getElementById("botBut");
 
+        setInterval(buyObjAdd, 1000);
+
+        alert("Bot Purchased!");
+
         buttonBot.classList.add("hide");
-
-        var interval = setInterval(buyObjAdd, 1000);
-
-        alert("Upgrade Purchased!");
 
     }
 
@@ -134,11 +134,11 @@ function buyObjDos() {
 
         let buttonBotDos = document.getElementById("botButDos");
 
-        buttonBotDos.style.display = "none";
-
-        var interval = setInterval(buyObjDosAdd, 1000);
+        setInterval(buyObjDosAdd, 1000);
 
         alert("Upgrade Purchased!");
+
+        buttonBotDos.classList.add("hide");
 
     }
 
@@ -156,4 +156,33 @@ function buyObjDosAdd() {
 
 }
 
+function buyObjThr() {
+
+    if (!(finalCount < 10000)) {
+
+        finalCount -= 10000;
+
+        let buttonBotThr = document.getElementById("botButThr");
+
+        setInterval(buyObjThrAdd, 1000);
+
+        alert("Upgrade Purchased!");
+
+        buttonBotThr.classList.add("hide");
+
+    }
+
+
+
+}
+
+
+function buyObjThrAdd() {
+
+    finalCount += 1000;
+
+    var outPutElement = document.getElementById("final");
+    outPutElement.textContent = (finalCount)
+
+}
 
