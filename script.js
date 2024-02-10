@@ -45,6 +45,22 @@ function oneMilObj() {
 
 const milInterval = setInterval(achivementsOneMillion, 100)
 
+//tempmultiplier
+
+function coinShow() {
+
+    
+
+}
+
+const coinInterval = setInterval(coinShow, 180000)
+
+function coinClick() {
+
+
+
+}
+
 //multipliers
 
 //mlt1
