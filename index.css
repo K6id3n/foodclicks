@@ -12,3 +12,10 @@ body{
     margin-top: 50dvh;
 
 }
+
+.balancecont{
+
+    display: flex;
+    flex-direction: row;
+
+}

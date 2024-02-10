@@ -1,37 +1,40 @@
-
+//world values
 let finalCount = 0
-let countAdd = 2
+let countAdd = 1
 
-function addCount(){
+function addCount() {
 
     finalCount += countAdd;
-    
+
     var outPutElement = document.getElementById("final");
     outPutElement.textContent = (finalCount)
 
 }
 
+//multipliers
+
 function addAdd() {
 
-    if(finalCount < 25) {
+    if (finalCount < 25) {
 
         alert("Insuficient Funds")
 
     }
 
-    if(!(finalCount < 25)) {
+    if (!(finalCount < 25)) {
 
-            countAdd *= 2; 
-    
-            finalCount -= 25;
+        countAdd *= 2;
 
-            console.log(finalCount);
-         
-            let button = document.getElementById("upgradeBut");
+        finalCount -= 25;
 
-            button.classList.add("hide");
+        var outPutElement = document.getElementById("final");
+        outPutElement.textContent = (finalCount)
 
-            alert("Upgrade Purchased!");
+        let button = document.getElementById("upgradeBut");
+
+        button.classList.add("hide");
+
+        alert("Upgrade Purchased!");
 
     }
 
@@ -40,25 +43,26 @@ function addAdd() {
 
 function addAddDos() {
 
-    if(finalCount < 50) {
+    if (finalCount < 50) {
 
         alert("Insuficient Funds")
 
     }
 
-    if(!(finalCount < 50)) {
+    if (!(finalCount < 50)) {
 
-            countAdd *= 2; 
-    
-            finalCount -= 50;
+        countAdd *= 2;
 
-            console.log(finalCount);
-         
-            let buttonDos = document.getElementById("upgradeBut2");
+        finalCount -= 50;
 
-            buttonDos.classList.add("hide");
+        var outPutElement = document.getElementById("final");
+        outPutElement.textContent = (finalCount)
 
-            alert("Upgrade Purchased!");
+        let buttonDos = document.getElementById("upgradeBut2");
+
+        buttonDos.classList.add("hide");
+
+        alert("Upgrade Purchased!");
 
     }
 
@@ -66,26 +70,90 @@ function addAddDos() {
 
 function addAddThr() {
 
-    if(finalCount < 100) {
+    if (finalCount < 100) {
 
         alert("Insuficient Funds")
 
     }
 
-    if(!(finalCount < 100)) {
+    if (!(finalCount < 100)) {
 
-            countAdd *= 2; 
-    
-            finalCount -= 100;  
+        countAdd *= 2;
 
-            console.log(finalCount);
-         
-            let buttonThr = document.getElementById("upgradeBut3");
+        finalCount -= 100;
 
-            buttonThr.classList.add("hide");
+        var outPutElement = document.getElementById("final");
+        outPutElement.textContent = (finalCount)
 
-            alert("Upgrade Purchased!");
+        let buttonThr = document.getElementById("upgradeBut3");
+
+        buttonThr.classList.add("hide");
+
+        alert("Upgrade Purchased!");
 
     }
 
 }
+
+//objects
+function buyObj() {
+
+    if (!(finalCount < 500)) {
+
+        finalCount -= 500;
+
+        let buttonBot = document.getElementById("botBut");
+
+        buttonBot.classList.add("hide");
+
+        var interval = setInterval(buyObjAdd, 1000);
+
+        alert("Upgrade Purchased!");
+
+    }
+
+
+
+}
+
+
+function buyObjAdd() {
+
+    finalCount += 10;
+
+    var outPutElement = document.getElementById("final");
+    outPutElement.textContent = (finalCount)
+
+}
+
+function buyObjDos() {
+
+    if (!(finalCount < 5000)) {
+
+        finalCount -= 5000;
+
+        let buttonBotDos = document.getElementById("botButDos");
+
+        buttonBotDos.style.display = "none";
+
+        var interval = setInterval(buyObjDosAdd, 1000);
+
+        alert("Upgrade Purchased!");
+
+    }
+
+
+
+}
+
+
+function buyObjDosAdd() {
+
+    finalCount += 100;
+
+    var outPutElement = document.getElementById("final");
+    outPutElement.textContent = (finalCount)
+
+}
+
+

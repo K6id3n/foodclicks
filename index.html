@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,25 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    
+
+    <section class="balancecont">
+        <h2 class="balance" id="final">0</h2>
+        <h2>$</h2>
+    </section>
+
     <button onclick="addCount()">Add One</button>
 
-    <button onclick="addAdd()" id="upgradeBut">Upgrade price: 25$</button>
-    <button onclick="addAddDos()" id="upgradeBut2">Upgrade price: 50$</button>
-    <button onclick="addAddThr()" id="upgradeBut3">Upgrade price: 100$</button>
+    <button onclick="addAdd()" id="upgradeBut">2x Multiplier price: 25$</button>
+    <button onclick="addAddDos()" id="upgradeBut2">2x Multiplier price: 50$</button>
+    <button onclick="addAddThr()" id="upgradeBut3">2x Multiplier price: 100$</button>
+
+    <button onclick="buyObj()" id="botBut">Bot: price: 500$</button>
+    <button onclick="buyObjDos()" id="botBut">Bot: price: 5000$</button>
 
 
-    <h2 class="balancebox" id="final"></h2>
 
 </body>
+
 </html>
