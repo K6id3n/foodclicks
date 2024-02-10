@@ -1,6 +1,6 @@
 //world values
 let finalCount = 0
-let countAdd = 100
+let countAdd = 10
 
 function addCount() {
 
@@ -98,6 +98,12 @@ function addAddThr() {
 //objects
 function buyObj() {
 
+    if (finalCount < 500) {
+
+        alert("Insuficient Funds")
+
+    }
+
     if (!(finalCount < 500)) {
 
         finalCount -= 500;
@@ -128,6 +134,12 @@ function buyObjAdd() {
 
 function buyObjDos() {
 
+    if (finalCount < 5000) {
+
+        alert("Insuficient Funds")
+
+    }
+
     if (!(finalCount < 5000)) {
 
         finalCount -= 5000;
@@ -157,6 +169,12 @@ function buyObjDosAdd() {
 }
 
 function buyObjThr() {
+
+    if (finalCount < 10000) {
+
+        alert("Insuficient Funds")
+
+    }    
 
     if (!(finalCount < 10000)) {
 
