@@ -1,7 +1,7 @@
 //world values
 let finalCount = 0
 
-let countAdd = 10
+let countAdd = 1
 
 let rateValue = 0
 
@@ -81,7 +81,7 @@ function reset() {
 
 }
 
-handleYes() {
+function handleYes() {
 
     location.reload();
 
