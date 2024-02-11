@@ -18,6 +18,19 @@
         </h1>
 
     </nav>
+    
+    <section class="coin" id="coin" onclick="coinHide()">
+
+        CLICK ME!
+
+    </section>
+
+    <section class="alert">
+        
+        <h2 class="alertext">News</h2>
+        <p id="alertBox" class="alertext"></p>
+
+    </section>
 
     <section class="toprow">
 
@@ -35,11 +48,11 @@
         <section class="counter">
 
             <section class="balancecont">
-                <h2>$</h2>
+                <h2 class="balance">$</h2>
                 <h2 class="balance" id="final">0</h2>
             </section>
 
-            <button onclick="addCount()">Add One</button>
+            <button onclick="addCount()" class="addbut">Add One</button>
 
         </section>
 
@@ -69,8 +82,8 @@
         <section class="mlt">
 
             <button onclick="addAdd()" id="upgradeBut">2x Multiplier price: $25</button>
-            <button onclick="addAddDos()" id="upgradeBut2">2x Multiplier price: $150</button>
-            <button onclick="addAddThr()" id="upgradeBut3">2x Multiplier price: $500</button>
+            <button onclick="addAddDos()" id="upgradeBut2">4x Multiplier price: $150</button>
+            <button onclick="addAddThr()" id="upgradeBut3">10x Multiplier price: $1000</button>
 
         </section>
 
@@ -91,6 +104,7 @@
 
         <h2>Achievements</h2>
         <p id="oneMil"></p>
+        
     </section>
 
     <footer>

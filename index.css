@@ -4,6 +4,14 @@
 
 }
 
+.coin{
+
+    border: 10px solid black;
+    border-radius: 10px;
+    display: none;
+
+}
+
 body{
 
     display: flex;
@@ -24,6 +32,28 @@ nav{
 
 }
 
+.alert{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid black;
+    border-radius: 10px;
+    width: 10dvw;
+    height: 20dvh;
+    font-size: x-large;
+    margin-top: 20dvh;
+    text-align: center;
+
+}
+
+.alertext{
+
+    margin: 0%;
+
+}
+
 h1{
 
     padding-left: 1dvw;
@@ -36,7 +66,7 @@ h1{
     flex-direction: row;
     justify-content: space-between;
     width: 50dvw;
-    margin-top: 20dvh;
+    margin-top: 1dvh;
 
 }
 
@@ -46,7 +76,8 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+    border: 10px solid black;
+    border-radius: 10px;
     width: 10dvw;
     height: 20dvh;
     font-size: x-large;
@@ -72,7 +103,8 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+    border: 10px solid black;
+    border-radius: 10px;
     width: 10dvw;
     height: 20dvh;
 
@@ -96,7 +128,8 @@ h1{
 
 .counter{
 
-    border: 2px solid black;
+    border: 10px solid black;
+    border-radius: 10px;
     width: 20dvw;
     height: 20dvh;
     display: flex;
@@ -129,8 +162,8 @@ button{
     align-self: flex-end;
     width: 20dvw;
     height: 15dvh;
-    border: 2px solid black;
-
+    border: 10px solid black;
+    border-radius: 10px;
 }
 
 .bots{
@@ -140,7 +173,8 @@ button{
     align-self: flex-start;
     width: 20dvw;
     height: 15dvh;
-    border: 2px solid black;
+    border: 10px solid black;
+    border-radius: 10px;
 
 }
 
@@ -165,7 +199,8 @@ button{
     align-items: center;
     width: 20dvw;
     height: 15dvh;
-    border: 2px solid black;
+    border: 10px solid black;
+    border-radius: 10px;
     margin-top: 1dvh;
 
 }
@@ -173,5 +208,111 @@ button{
 footer{
 
     margin-top: 100dvh;
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .alert{
+
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 5%;
+
+    }
+
+    .alertext{
+
+        font-size: x-large;
+
+    }
+
+    h2{
+
+        font-size: small;
+
+    }
+
+    .balance{
+
+        font-size: x-large;
+
+    }
+
+    .addbut{
+
+        font-size: x-large;
+
+    }
+
+    button{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: small;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.548);
+        height: 50%;
+
+    }
+
+    .toprow{
+
+        width: 90%;
+
+    }
+
+    .mltcounter{
+
+        width: 20%;
+        padding: 5%;
+
+    }
+
+    .multiboxh{
+
+        font-size: large;
+
+    }
+
+    .botcont{
+
+        width: 20%;
+        padding: 5%;
+
+    }
+
+    .mbrow{
+
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .bots{
+
+        display: flex;
+        width: 38dvw;
+        margin-top: 1dvh;
+        
+    }
+
+    .mlt{
+
+        display: flex;
+        width: 38dvw;
+        margin-top: 1dvh;
+
+    }
+
+    .achievements{
+
+        width: 85%;
+
+    }
 
 }

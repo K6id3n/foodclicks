@@ -1,6 +1,8 @@
 //world values
 let finalCount = 0
-let countAdd = 1
+
+let countAdd = 10
+
 function addCount() {
 
     finalCount += countAdd;
@@ -45,15 +47,21 @@ function oneMilObj() {
 
 const milInterval = setInterval(achivementsOneMillion, 100)
 
+function coinHide() {
+
+
+    
+}
+
 //tempmultiplier
 
 function coinShow() {
 
-    
+    document.getElementById("coin").style.display = "flex";
 
 }
 
-const coinInterval = setInterval(coinShow, 180000)
+const coinInterval = setInterval(coinShow, 18000)
 
 function coinClick() {
 
@@ -89,7 +97,8 @@ function addAdd() {
 
         button.classList.add("hide");
 
-        alert("Upgrade Purchased!");
+        var outPutElement = document.getElementById("alertBox");
+        outPutElement.textContent = ("2x Mulltiplier Purchased!")
 
     }
 
@@ -121,7 +130,8 @@ function addAddDos() {
 
         buttonDos.classList.add("hide");
 
-        alert("Upgrade Purchased!");
+        var outPutElement = document.getElementById("alertBox");
+        outPutElement.textContent = ("4x Mulltiplier Purchased!")
 
     }
 
@@ -131,17 +141,17 @@ function addAddDos() {
 
 function addAddThr() {
 
-    if (finalCount < 500) {
+    if (finalCount < 1000) {
 
         alert("Insuficient Funds")
 
     }
 
-    if (!(finalCount < 500)) {
+    if (!(finalCount < 1000)) {
 
         countAdd *= 10;
 
-        finalCount -= 500;
+        finalCount -= 1000;
 
         var outPutElement = document.getElementById("final");
         outPutElement.textContent = (finalCount)
@@ -153,7 +163,8 @@ function addAddThr() {
 
         buttonThr.classList.add("hide");
 
-        alert("Upgrade Purchased!");
+        var outPutElement = document.getElementById("alertBox");
+        outPutElement.textContent = ("10x Mulltiplier Purchased!")
 
     }
 
@@ -199,13 +210,15 @@ function buyObj() {
         var outPutElement = document.getElementById("botCount");
         outPutElement.textContent = (botCount)
 
-        alert("Bot Purchased!");
+        var outPutElement = document.getElementById("alertBox");
+        outPutElement.textContent = ("Bot 1 Purchased!")
 
     }
 
     if (objPrice >= 1500) {
 
-        alert("Bot Maxed Out!")
+        var outPutElement = document.getElementById("alertBox");
+        outPutElement.textContent = ("Bot 1 Maxed Out!")
 
         document.getElementById("botBut").style.display = "none";
 
@@ -249,13 +262,15 @@ function buyObjDos() {
         var outPutElement = document.getElementById("botCountDos");
         outPutElement.textContent = (botCountDos)
 
-        alert("Upgrade Purchased!");
+        var outPutElement = document.getElementById("alertBox");
+        outPutElement.textContent = ("Bot 2 Purchased!")
 
     }
 
     if (objPriceDos >= 10000) {
 
-        alert("Bot Maxed Out!")
+        var outPutElement = document.getElementById("alertBox");
+        outPutElement.textContent = ("Bot 2 Maxed Out!")
 
         document.getElementById("botButDos").style.display = "none";
 
@@ -299,13 +314,15 @@ function buyObjThr() {
         var outPutElement = document.getElementById("botCountThr");
         outPutElement.textContent = (botCountThr)
 
-        alert("Upgrade Purchased!");
+        var outPutElement = document.getElementById("alertBox");
+        outPutElement.textContent = ("Bot 3 Purchased!")
 
     }
 
     if (objPriceThr >= 60000) {
 
-        alert("Bot Maxed Out!")
+        var outPutElement = document.getElementById("alertBox");
+        outPutElement.textContent = ("Bot 3 Maxed Out!")
 
         document.getElementById("botButThr").style.display = "none";
 
