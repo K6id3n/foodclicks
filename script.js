@@ -1,7 +1,7 @@
 //world values
 let finalCount = 0
 
-let countAdd = 10
+let countAdd = 1
 
 function addCount() {
 
@@ -50,7 +50,7 @@ const milInterval = setInterval(achivementsOneMillion, 100)
 function coinHide() {
 
 
-    
+
 }
 
 //tempmultiplier

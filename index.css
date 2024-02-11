@@ -256,6 +256,7 @@ footer{
         color: white;
         background-color: rgba(0, 0, 0, 0.548);
         height: 50%;
+        touch-action: manipulation;
 
     }
 
