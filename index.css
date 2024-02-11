@@ -43,7 +43,7 @@ nav{
     width: 10dvw;
     height: 20dvh;
     font-size: x-large;
-    margin-top: 20dvh;
+    margin-top: 5dvh;
     text-align: center;
 
 }
@@ -123,6 +123,17 @@ h1{
     flex-direction: row;
     justify-content: center;
     font-size: xx-large;
+    border: 10px solid black;
+    border-radius: 10px;
+    width: 49dvw;
+    margin-top: 1dvh;
+
+}
+
+.balance{
+
+    margin-top: 1dvh;
+    margin-bottom: 1dvh;
 
 }
 
@@ -207,7 +218,7 @@ button{
 
 footer{
 
-    margin-top: 100dvh;
+    margin-top: 10dvh;
 
 }
 
@@ -241,9 +252,22 @@ footer{
 
     }
 
+    .balancecont{
+
+        width: 85%;
+
+    }
+
     .addbut{
 
         font-size: x-large;
+        height: 25dvh;
+
+    }
+
+    .counter{
+
+        height: 31dvh;
 
     }
 
@@ -270,6 +294,7 @@ footer{
 
         width: 20%;
         padding: 5%;
+        height: 25dvh;
 
     }
 
@@ -283,6 +308,7 @@ footer{
 
         width: 20%;
         padding: 5%;
+        height: 25dvh;
 
     }
 
@@ -298,6 +324,7 @@ footer{
 
         display: flex;
         width: 38dvw;
+        height: 35dvh;
         margin-top: 1dvh;
         
     }
@@ -306,6 +333,7 @@ footer{
 
         display: flex;
         width: 38dvw;
+        height: 35dvh;
         margin-top: 1dvh;
 
     }
