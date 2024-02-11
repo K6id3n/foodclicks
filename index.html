@@ -17,6 +17,19 @@
             Bot Clicks
         </h1>
 
+        <section class="dropdn">
+
+            <button class="dropbut"><img src="Menu.png" alt="menu button"></button>
+
+            <section class="dropcont">
+
+                <button onclick="reset()">Reset</button>
+                <button onclick="save()">Save</button>
+
+            </section>
+
+        </section>
+
     </nav>
 
     <section class="coin" id="coin" onclick="coinHide()">
@@ -25,10 +38,25 @@
 
     </section>
 
-    <section class="alert">
+    <section class="newsrow">
 
-        <h2 class="alertext">News</h2>
-        <p id="alertBox" class="alertext"></p>
+        <section class="alert">
+
+            <h2 class="alertext">News</h2>
+            <p id="alertBox" class="alertext"></p>
+
+        </section>
+
+        <section class="alert">
+
+            <h2 class="alertext">Rate</h2>
+            <section class="ratdol">
+                <p class="ratext">$</p>
+                <p id="rate" class="ratext">0</p>
+            </section>
+            <p class="ratext">per second</p>
+
+        </section>
 
     </section>
 
@@ -53,7 +81,7 @@
         <section class="counter">
 
 
-            <button onclick="addCount()" class="addbut">Add One</button>
+            <button onclick="addCount()" class="addbut">Sell</button>
 
         </section>
 

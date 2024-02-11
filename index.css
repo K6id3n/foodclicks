@@ -24,11 +24,89 @@ body{
 
 }
 
+.dropbut{
+
+    height: 90%;
+    margin: 0%;
+    margin-top: 3%;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+    padding-right: 2dvw;
+}
+
+.dropcont{
+
+    display: none;
+    position: absolute;
+    z-index: 1;
+
+}
+
+.dropdn:hover .dropcont {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.dropcont a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropcont a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
 nav{
 
     background-color: black;
     width: 100%;
     color: white;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.newsrow{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40dvw;
+
+}
+
+.ratext{
+
+    margin: 0.5dvh;
+    margin-right: 0%;
+    margin-left: 0%;
+
+}
+
+.ratdol{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+button{
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.548);
+
+}
+
+.addbut{
+
+    height: 100%;
+    font-size: 500%;
 
 }
 
@@ -226,7 +304,7 @@ footer{
 
     .alert{
 
-        width: 85%;
+        width: 45%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -342,6 +420,15 @@ footer{
 
         width: 85%;
 
+    }
+
+    .newsrow{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 88%;
+    
     }
 
 }

@@ -1,7 +1,9 @@
 //world values
 let finalCount = 0
 
-let countAdd = 1
+let countAdd = 10
+
+let rateValue = 0
 
 function addCount() {
 
@@ -32,6 +34,13 @@ function achivementsOneMillion() {
 
         setInterval(oneMilObj, 100)
 
+        outPutElement.textContent = (rateValue)
+
+        rateValue += 100000;
+
+        var outPutElement = document.getElementById("rate");
+        outPutElement.textContent = (rateValue)
+
     }
 
 }
@@ -50,6 +59,31 @@ const milInterval = setInterval(achivementsOneMillion, 100)
 function coinHide() {
 
 
+
+}
+
+//save
+
+function save() {
+
+    localStorage
+
+}
+
+//reset
+
+function reset() {
+
+    var result = confirm("Do you want to proceed?");
+    if (result) {
+        handleYes();
+    }
+
+}
+
+handleYes() {
+
+    location.reload();
 
 }
 
@@ -213,6 +247,11 @@ function buyObj() {
         var outPutElement = document.getElementById("alertBox");
         outPutElement.textContent = ("Bot 1 Purchased!")
 
+        rateValue += 50;
+
+        var outPutElement = document.getElementById("rate");
+        outPutElement.textContent = (rateValue)
+
     }
 
     if (objPrice >= 1500) {
@@ -265,6 +304,11 @@ function buyObjDos() {
         var outPutElement = document.getElementById("alertBox");
         outPutElement.textContent = ("Bot 2 Purchased!")
 
+        rateValue += 100;
+
+        var outPutElement = document.getElementById("rate");
+        outPutElement.textContent = (rateValue)
+
     }
 
     if (objPriceDos >= 10000) {
@@ -316,6 +360,11 @@ function buyObjThr() {
 
         var outPutElement = document.getElementById("alertBox");
         outPutElement.textContent = ("Bot 3 Purchased!")
+
+        rateValue += 1000;
+
+        var outPutElement = document.getElementById("rate");
+        outPutElement.textContent = (rateValue)
 
     }
 
