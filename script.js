@@ -18,7 +18,7 @@ function addCount() {
 
 function achivementsOneMillion() {
 
-    if(finalCount >= 1000000) {
+    if (finalCount >= 1000000) {
 
         alert("Congrats on one million!")
 
@@ -56,12 +56,6 @@ function oneMilObj() {
 
 const milInterval = setInterval(achivementsOneMillion, 100)
 
-function coinHide() {
-
-
-
-}
-
 //save
 
 function save() {
@@ -89,19 +83,77 @@ function handleYes() {
 
 //tempmultiplier
 
+
 function coinShow() {
 
     document.getElementById("coin").style.display = "flex";
 
+    clearInterval(coinInterval);
+
+
+    function coinHide() {
+
+        document.getElementById("coin").style.display = "none";
+
+    }
+
+    setTimeout(coinHide, 5000)
+
 }
 
-const coinInterval = setInterval(coinShow, 18000)
+let coinInterval = setInterval(coinShow, 90000)
 
 function coinClick() {
 
+    document.getElementById("coin").style.display = "none";
 
+    countAdd *= 100; 
+
+    var outPutElement = document.getElementById("multCount");
+    outPutElement.textContent = countAdd;
+
+    function coinEnd() {
+
+        countAdd /= 100;
+
+        var outPutElement = document.getElementById("multCount");
+
+        outPutElement.textContent = countAdd;
+
+    }
+
+    setTimeout(coinEnd, 10000);
+
+    timer();
+}
+
+function timer() {
+
+    let i = 10;
+
+    function countdown() {
+        
+    var outPutElement = document.getElementById("alertBox");
+    outPutElement.textContent = "Boost:" + i;
+        i--;
+        if (i > 0) {
+            setTimeout(countdown, 1000);
+        } 
+        if (i === 0) {
+
+            var outPutElement = document.getElementById("alertBox");
+            outPutElement.textContent = "Boost Over";
+            return;
+
+        }
+    }
+
+    countdown();
 
 }
+
+
+
 
 //multipliers
 
@@ -234,11 +286,11 @@ function buyObj() {
 
         setInterval(buyObjAdd, 1000);
 
-        objPrice  += 100;
+        objPrice += 100;
 
         var outPutElement = document.getElementById("objPrice");
         outPutElement.textContent = (objPrice)
-        
+
         botCount += 1;
 
         var outPutElement = document.getElementById("botCount");
@@ -291,8 +343,8 @@ function buyObjDos() {
 
         setInterval(buyObjDosAdd, 1000);
 
-        objPriceDos  += 1000;
-        
+        objPriceDos += 1000;
+
         var outPutElement = document.getElementById("objPriceDos");
         outPutElement.textContent = (objPriceDos)
 
@@ -340,7 +392,7 @@ function buyObjThr() {
 
         alert("Insuficient Funds")
 
-    }    
+    }
 
     if (!(finalCount < objPriceThr)) {
 
@@ -348,8 +400,8 @@ function buyObjThr() {
 
         setInterval(buyObjThrAdd, 1000);
 
-        objPriceThr  += 5000;
-        
+        objPriceThr += 5000;
+
         var outPutElement = document.getElementById("objPriceThr");
         outPutElement.textContent = (objPriceThr)
 
