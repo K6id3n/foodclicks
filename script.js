@@ -64,13 +64,20 @@ function save() {
 
     let finalCountString = finalCount.toString();
 
-    localStorage.setItem('finalCountString', finalCountString);
+
+    localStorage.setItem('finalCountString', finalCountString); 
 
 }
 
 function restore(finalCountString) {
 
     console.log(finalCountString);
+
+    let finalCount = localStorage.getItem('finalCountString')
+
+    var outPutElement = document.getElementById("final");
+    outPutElement.textContent = (finalCount)
+
 }
 
 //reset
