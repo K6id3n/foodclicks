@@ -58,25 +58,24 @@ const milInterval = setInterval(achivementsOneMillion, 100)
 
 //save/restore 
 
-
-
 function save() {
 
     let finalCountString = finalCount.toString();
 
-
     localStorage.setItem('finalCountString', finalCountString); 
+    
+    console.log('saved!')
 
 }
 
-function restore(finalCountString) {
+function restore() {
     
-    console.log(finalCountString);
+    let finalCountString = localStorage.getItem('finalCountString');
 
-    let finalCount = parseInt(finalCountString);
+    let finalCount =  parseInt(finalCountString);
 
     var outPutElement = document.getElementById("final");
-    outPutElement.textContent = (finalCount);
+    outPutElement.textContent = (finalCount)
 
 }
 
