@@ -70,7 +70,7 @@ function save() {
 
 function restore(finalCountString) {
 
-    console.log(finalCountString)
+    console.log(finalCountString);
 }
 
 //reset
