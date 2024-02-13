@@ -56,11 +56,31 @@ function oneMilObj() {
 
 const milInterval = setInterval(achivementsOneMillion, 100)
 
-//save
+//save/restore 
 
 function save() {
 
-    localStorage
+    var formData = {
+
+        finalcount: document.getElementById('finalCount').innerText = formData;
+
+    };
+
+    var savedData = JSON.stringify(formData);
+
+    localStorage.setItem('progress', savedData)
+
+}
+
+function pageRestore() {
+
+    var savedData = localStorage.getItem("progress");
+
+    if(savedData) {
+
+
+
+    }
 
 }
 
