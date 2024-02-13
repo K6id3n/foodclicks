@@ -1,11 +1,13 @@
 //world values
-let finalCount = 0
 
-let countAdd = 1
+let finalCount = 0;
+    
+let countAdd = 10;
 
-let rateValue = 0
+let rateValue = 0;
 
 function addCount() {
+
 
     finalCount += countAdd;
 
@@ -69,15 +71,16 @@ function save() {
 }
 
 function restore() {
-    
+
+    //Restore Balence
+
     let finalCountString = localStorage.getItem('finalCountString');
+    let addOldBalence = parseInt(finalCountString);  
+    finalCount = addOldBalence;
+    let outPutElement = document.getElementById("final");
+    outPutElement.textContent = (addOldBalence)
 
-    let addOldBalence =  parseInt(finalCountString);
-
-    finalCount = finalCount + addOldBalence
-
-    var outPutElement = document.getElementById("final");
-    outPutElement.textContent = (finalCount)
+    //Restore Rate
 
 }
 
