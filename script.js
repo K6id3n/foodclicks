@@ -2,7 +2,7 @@
 
 let finalCount = 0;
     
-let countAdd = 10;
+let countAdd = 1;
 
 let rateValue = 0;
 
@@ -181,32 +181,7 @@ function timer() {
 
 function addAdd() {
 
-    if (finalCount < 25) {
-
-        alert("Insuficient Funds")
-
-    }
-
-    if (!(finalCount < 25)) {
-
-        countAdd *= 2;
-
-        finalCount -= 25;
-
-        var outPutElement = document.getElementById("final");
-        outPutElement.textContent = (finalCount)
-
-        var outPutElement = document.getElementById("multCount");
-        outPutElement.textContent = (countAdd)
-
-        let button = document.getElementById("upgradeBut");
-
-        button.classList.add("hide");
-
-        var outPutElement = document.getElementById("alertBox");
-        outPutElement.textContent = ("2x Mulltiplier Purchased!")
-
-    }
+    addAddFunction(25, 2, upgradeBut);
 
 }
 
@@ -214,32 +189,7 @@ function addAdd() {
 
 function addAddDos() {
 
-    if (finalCount < 150) {
-
-        alert("Insuficient Funds")
-
-    }
-
-    if (!(finalCount < 150)) {
-
-        countAdd *= 4;
-
-        finalCount -= 150;
-
-        var outPutElement = document.getElementById("final");
-        outPutElement.textContent = (finalCount)
-
-        var outPutElement = document.getElementById("multCount");
-        outPutElement.textContent = (countAdd)
-
-        let buttonDos = document.getElementById("upgradeBut2");
-
-        buttonDos.classList.add("hide");
-
-        var outPutElement = document.getElementById("alertBox");
-        outPutElement.textContent = ("4x Mulltiplier Purchased!")
-
-    }
+    addAddFunction(150, 4, upgradeBut2);
 
 }
 
@@ -247,30 +197,31 @@ function addAddDos() {
 
 function addAddThr() {
 
-    if (finalCount < 1000) {
+    addAddFunction(1000, 10, upgradeBut3);
+
+}
+
+//dynamic buy function
+
+function addAddFunction(price, mlt, butId) {
+
+    if (finalCount < price) {
 
         alert("Insuficient Funds")
 
     }
 
-    if (!(finalCount < 1000)) {
+    if (!(finalCount < price)) {
 
-        countAdd *= 10;
-
-        finalCount -= 1000;
-
-        var outPutElement = document.getElementById("final");
-        outPutElement.textContent = (finalCount)
-
+        countAdd *= mlt;
+        finalCount -= price;
         var outPutElement = document.getElementById("multCount");
         outPutElement.textContent = (countAdd)
-
-        let buttonThr = document.getElementById("upgradeBut3");
-
-        buttonThr.classList.add("hide");
-
+        var outPutElement = document.getElementById("final");
+        outPutElement.textContent = (finalCount);
+        butId.classList.add("hide");
         var outPutElement = document.getElementById("alertBox");
-        outPutElement.textContent = ("10x Mulltiplier Purchased!")
+        outPutElement.textContent = (mlt + "x Multiplier Purchased!")
 
     }
 
@@ -304,7 +255,7 @@ function buyObj() {
 
         finalCount -= objPrice;
 
-        setInterval(buyObjAdd, 1000);
+        setInterval(buyObjAdd, 20);
 
         objPrice += 100;
 
@@ -340,7 +291,7 @@ function buyObj() {
 
 function buyObjAdd() {
 
-    finalCount += 50;
+    finalCount += 1;
 
     var outPutElement = document.getElementById("final");
     outPutElement.textContent = (finalCount)
