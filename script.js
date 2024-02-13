@@ -72,7 +72,9 @@ function restore() {
     
     let finalCountString = localStorage.getItem('finalCountString');
 
-    let finalCount =  parseInt(finalCountString);
+    let addOldBalence =  parseInt(finalCountString);
+
+    finalCount = finalCount + addOldBalence
 
     var outPutElement = document.getElementById("final");
     outPutElement.textContent = (finalCount)
