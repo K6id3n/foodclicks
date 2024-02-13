@@ -60,44 +60,25 @@ const milInterval = setInterval(achivementsOneMillion, 100)
 
 function save() {
 
-    console.log('saved!')
-
-    //final balence
-
     let finalCountString = finalCount.toString();
+
     localStorage.setItem('finalCountString', finalCountString); 
-
-    //rate
-
-    let rateValueString = rateValue.toString();
-    localStorage.setItem('rateValueString', rateValueString); 
+    
+    console.log('saved!')
 
 }
 
-let saveFun = setInterval(save, 60000);
-
 function restore() {
-    // Restore final balance
-    let finalCount = 0;
+    
     let finalCountString = localStorage.getItem('finalCountString');
-    if (finalCountString !== null) {
-        let addOldBalance = parseInt(finalCountString);
-        finalCount += addOldBalance;
-    }
-    var finalOutputElement = document.getElementById("final");
-    finalOutputElement.textContent = finalCount;
 
-    // Restore rate
-    let rateValue = 0;
-    let rateValueString = localStorage.getItem('rateValueString');
-    if (rateValueString !== null) {
-        let addOldRate = parseInt(rateValueString);
-        rateValue += addOldRate;
-    }
-    var rateOutputElement = document.getElementById("rate");
-    rateOutputElement.textContent = rateValue;
+    let addOldBalence =  parseInt(finalCountString);
 
-    console.log('restored');
+    finalCount = finalCount + addOldBalence
+
+    var outPutElement = document.getElementById("final");
+    outPutElement.textContent = (finalCount)
+
 }
 
 //reset
@@ -113,7 +94,7 @@ function reset() {
 
 function handleYes() {
 
-
+    location.reload();
 
 }
 
