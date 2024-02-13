@@ -70,14 +70,13 @@ function save() {
 }
 
 function restore(finalCountString) {
-
+    
     console.log(finalCountString);
 
-    let finalCountString = localStorage.getItem('finalCountString')
-    let finalCount = parseInt(finalCountString)
+    let finalCount = parseInt(finalCountString);
 
     var outPutElement = document.getElementById("final");
-    outPutElement.textContent = (finalCount)
+    outPutElement.textContent = (finalCount);
 
 }
 
