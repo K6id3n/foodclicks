@@ -12,7 +12,7 @@ function addCount() {
     finalCount += countAdd;
 
     //for debug
-    finalCount += 999;
+    //finalCount += 999;
 
     var outPutElement = document.getElementById("final");
     outPutElement.textContent = (finalCount)
@@ -223,17 +223,15 @@ function addAddFunction(price, mlt, butId) {
 
 //objects
 
-let objPriceValueOne = 500;
+let objPriceOne = 50;
 
-let objPriceValueDos = 5000;
+let objPriceDos = 5000;
 
-let objPriceValueThr = 10000;
-
-
+let objPriceThr = 10000;
 
 //dynamic buy obj fun
 
-function buyObjFun(objPriceValue) {
+function buyObjFun(objPriceValue, objPriceHtmlId, addBot, rate) {
 
     if (finalCount < objPriceValue) {
         alert("Insuficient Funds");
@@ -247,15 +245,14 @@ function buyObjFun(objPriceValue) {
         outPutElement.textContent = (finalCount);
         objPriceValue *= 1.2;
         objPriceValue = Math.ceil(objPriceValue);
-        var outPutElement = document.getElementById("objPriceValueOne");
+        var outPutElement = document.getElementById(objPriceHtmlId);
         outPutElement.textContent = (objPriceValue);
-
-        //setbot function
-
-        //setInterval(buyObjAdd, 20) have a path for: function, interval
-
+        setInterval(addBot, 20)
+        rateValue += rate;
+        console.log(rateValue);
+        //var outPutElement = document.getElementById("ratext");
+        //outPutElement.textContent = (rateValue);
         return objPriceValue;
-
     }
 
 }
@@ -263,50 +260,38 @@ function buyObjFun(objPriceValue) {
 //obj1
 
 function buyObj() {
-    objPriceValueOne = buyObjFun(objPriceValueOne);
+    objPriceOne = buyObjFun(objPriceOne, "objPriceValueOne", buyObjAdd, 50);
 }
 
 
 function buyObjAdd() {
-
     finalCount += 1;
-
     var outPutElement = document.getElementById("final");
     outPutElement.textContent = (finalCount)
-
 }
 
 //obj2
 
 function buyObjDos() {
-
-    objPriceValueDos = buyObjFun(objPriceValueDos);
-
+    objPriceDos = buyObjFun(objPriceDos, "objPriceValueDos", buyObjAddDos, 100);
 }
 
 
-function buyObjDosAdd() {
-
-    finalCount += 100;
-
+function buyObjAddDos() {
+    finalCount += 2;
     var outPutElement = document.getElementById("final");
     outPutElement.textContent = (finalCount)
-
 }
 
 //obj3
 
 function buyObjThr() {
-    objPriceValueThr = buyObjFun(objPriceValueThr);
+    objPriceThr = buyObjFun(objPriceThr, "objPriceValueThr", buyObjAddThr, 1000);
 }
 
-
-function buyObjThrAdd() {
-
-    finalCount += 1000;
-
+function buyObjAddThr() {
+    finalCount += 20;
     var outPutElement = document.getElementById("final");
     outPutElement.textContent = (finalCount)
-
 }
 
