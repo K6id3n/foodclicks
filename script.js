@@ -246,8 +246,7 @@ function buyObjFun(objPriceValue) {
         var outPutElement = document.getElementById("final");
         outPutElement.textContent = (finalCount);
         objPriceValue *= 1.2;
-        let roundedValue = Math.ceil(objPriceValue);
-        objPriceValue = roundedValue;
+        objPriceValue = Math.ceil(objPriceValue);
         var outPutElement = document.getElementById("objPriceValueOne");
         outPutElement.textContent = (objPriceValue);
 
