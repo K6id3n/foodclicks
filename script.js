@@ -22,7 +22,6 @@ function addCount() {
 //notes
 
 //think of implementing gamble?
-//finish dynamic bot buy fun
 
 //achivements
 
@@ -30,18 +29,18 @@ function achivementsOneMillion() {
 
     if (finalCount >= 1000000) {
 
-        alert("Congrats on one million!")
-        clearInterval(milInterval)
+        alert("Congrats on one million!");
+        clearInterval(milInterval);
         var outPutElement = document.getElementById("oneMil");
         outPutElement.textContent = ("One Million")
         countAdd *= 10;
         var outPutElement = document.getElementById("multCount");
-        outPutElement.textContent = (countAdd)
-        setInterval(oneMilObj, 100)
-        outPutElement.textContent = (rateValue)
+        outPutElement.textContent = (countAdd);
+        setInterval(oneMilObj, 100);
+        outPutElement.textContent = (rateValue);
         rateValue += 100000;
         var outPutElement = document.getElementById("rate");
-        outPutElement.textContent = (rateValue)
+        outPutElement.textContent = (rateValue);
 
     }
 
@@ -51,7 +50,7 @@ function oneMilObj() {
 
     finalCount += 10000;
     var outPutElement = document.getElementById("final");
-    outPutElement.textContent = (finalCount)
+    outPutElement.textContent = (finalCount);
 
 }
 
@@ -61,26 +60,62 @@ const milInterval = setInterval(achivementsOneMillion, 100)
 
 function save() {
 
+    //save balence
     let finalCountString = finalCount.toString();
+    localStorage.setItem('balence', finalCountString); 
 
-    localStorage.setItem('finalCountString', finalCountString); 
-    
-    console.log('saved!')
+    //saverate
+    let rateValueString = rateValue.toString();
+    localStorage.setItem('rate', rateValueString); 
 
+    //get time
+    let timeSaved = new Date();
+    let timeSavedStr = timeSaved.toString();
+    localStorage.setItem('timeLeft', timeSavedStr)
+
+    //savelog
+    console.log('saved!');
+    console.log("items saved: balence:$" + finalCountString + " rate:$" + rateValueString);    
+    console.log("time saved: ", timeSavedStr);
+
+    //save bots
+    let botCntOneString = botCntOne.toString();
+    localStorage.setItem('bot1count', botCntOneString);
+
+    let botCntDosString = botCntDos.toString();
+    localStorage.setItem('bot2count', botCntDosString);
+
+    let botCntThrString = botCntThr.toString();
+    localStorage.setItem('bot3count', botCntThrString);
 }
 
 function restore() {
 
     //Restore Balence
+    let finalCountString = localStorage.getItem('balence'); 
+    finalCount = parseInt(finalCountString); 
+    
 
-    let finalCountString = localStorage.getItem('finalCountString');
-    let addOldBalence = parseInt(finalCountString);  
-    finalCount = addOldBalence;
+    //get time
+    
+
+    //calc time gone/run in back
+    let timeBack = new Date();
+    let timeSaved = localStorage.getItem('timeLeft');
+    let timeSavedUnStr = new Date(timeSaved);
+    let timeLog = timeBack - timeSavedUnStr;
+    let timeRate = localStorage.getItem('rate');
+    timeRate = parseInt(timeRate);
+    rateValue = timeRate;
+    timeRate /= 2000;
+    let earned = timeLog *= timeRate;
+    earned = Math.ceil(earned);
+    var rateOutput = document.getElementById("rate");
+    rateOutput.textContent = (rateValue);
+    finalCount = finalCount += earned;
     let outPutElement = document.getElementById("final");
-    outPutElement.textContent = (addOldBalence)
-
-    //Restore Rate
-
+    outPutElement.textContent = (finalCount);
+    return rateValue;
 }
 
 //reset
@@ -165,10 +200,6 @@ function timer() {
     countdown();
 
 }
-
-
-
-
 //multipliers
 
 //mlt1
@@ -205,7 +236,7 @@ function addAddFunction(price, mlt, butId) {
 
     }
 
-    if (finalCount > price) {
+    if (finalCount >= price) {
 
         countAdd *= mlt;
         finalCount -= price;
@@ -224,14 +255,16 @@ function addAddFunction(price, mlt, butId) {
 //objects
 
 let objPriceOne = 50;
+let objPriceDos = 10000;
+let objPriceThr = 15000;
 
-let objPriceDos = 5000;
-
-let objPriceThr = 10000;
+let botCntOne = 0;
+let botCntDos = 0;
+let botCntThr = 0;
 
 //dynamic buy obj fun
 
-function buyObjFun(objPriceValue, objPriceHtmlId, addBot, rate) {
+function buyObjFun(objPriceValue, objPriceHtmlId, addBot, rate, botCnt) {
 
     if (finalCount < objPriceValue) {
         alert("Insuficient Funds");
@@ -249,9 +282,10 @@ function buyObjFun(objPriceValue, objPriceHtmlId, addBot, rate) {
         outPutElement.textContent = (objPriceValue);
         setInterval(addBot, 20)
         rateValue += rate;
-        console.log(rateValue);
-        //var outPutElement = document.getElementById("ratext");
-        //outPutElement.textContent = (rateValue);
+        var outPutElement = document.getElementById("rate");
+        outPutElement.textContent = (rateValue)
+        //fix this lil bro it no no wanna wrk
+        botCnt += 1;
         return objPriceValue;
     }
 
@@ -260,7 +294,7 @@ function buyObjFun(objPriceValue, objPriceHtmlId, addBot, rate) {
 //obj1
 
 function buyObj() {
-    objPriceOne = buyObjFun(objPriceOne, "objPriceValueOne", buyObjAdd, 50);
+    objPriceOne = buyObjFun(objPriceOne, "objPriceValueOne", buyObjAdd, 50, botCntOne);
 }
 
 
@@ -273,7 +307,7 @@ function buyObjAdd() {
 //obj2
 
 function buyObjDos() {
-    objPriceDos = buyObjFun(objPriceDos, "objPriceValueDos", buyObjAddDos, 100);
+    objPriceDos = buyObjFun(objPriceDos, "objPriceValueDos", buyObjAddDos, 100, botCntDos);
 }
 
 
@@ -286,7 +320,7 @@ function buyObjAddDos() {
 //obj3
 
 function buyObjThr() {
-    objPriceThr = buyObjFun(objPriceThr, "objPriceValueThr", buyObjAddThr, 1000);
+    objPriceThr = buyObjFun(objPriceThr, "objPriceValueThr", buyObjAddThr, 1000, botCntThr);
 }
 
 function buyObjAddThr() {
