@@ -1,10 +1,18 @@
 //world values
 
 let finalCount = 0;
-    
+
 let countAdd = 1;
 
 let rateValue = 0;
+
+let objPriceOne = 50;
+let objPriceDos = 10000;
+let objPriceThr = 15000;
+
+let botCntOne = 0;
+let botCntDos = 0;
+let botCntThr = 0;
 
 function addCount() {
 
@@ -62,11 +70,11 @@ function save() {
 
     //save balence
     let finalCountString = finalCount.toString();
-    localStorage.setItem('balence', finalCountString); 
+    localStorage.setItem('balence', finalCountString);
 
     //saverate
     let rateValueString = rateValue.toString();
-    localStorage.setItem('rate', rateValueString); 
+    localStorage.setItem('rate', rateValueString);
 
     //get time
     let timeSaved = new Date();
@@ -75,7 +83,7 @@ function save() {
 
     //savelog
     console.log('saved!');
-    console.log("items saved: balence:$" + finalCountString + " rate:$" + rateValueString);    
+    console.log("items saved: balence:$" + finalCountString + " rate:$" + rateValueString);
     console.log("time saved: ", timeSavedStr);
 
     //save bots
@@ -91,13 +99,15 @@ function save() {
 
 function restore() {
 
+    console.log("restored!")
+
     //Restore Balence
-    let finalCountString = localStorage.getItem('balence'); 
-    finalCount = parseInt(finalCountString); 
-    
+    let finalCountString = localStorage.getItem('balence');
+    finalCount = parseInt(finalCountString);
+
 
     //get time
-    
+
 
     //calc time gone/run in back
     let timeBack = new Date();
@@ -106,15 +116,22 @@ function restore() {
     let timeLog = timeBack - timeSavedUnStr;
     let timeRate = localStorage.getItem('rate');
     timeRate = parseInt(timeRate);
-    rateValue = timeRate;
     timeRate /= 2000;
     let earned = timeLog *= timeRate;
     earned = Math.ceil(earned);
-    var rateOutput = document.getElementById("rate");
-    rateOutput.textContent = (rateValue);
     finalCount = finalCount += earned;
     let outPutElement = document.getElementById("final");
     outPutElement.textContent = (finalCount);
+
+
+    //restore bots
+    //let bot1count = get
+
+    let botCntOne = localStorage.getItem('bot1count');
+    botCntOne = parseInt(botCntOne);
+    console.log(botCntOne);
+
+    objPriceOne = botRestore(objPriceOne, "objPriceValueOne", buyObjAdd, 50, botCntOne);
     return rateValue;
 }
 
@@ -160,7 +177,7 @@ let coinInterval = setInterval(coinShow, 90000)
 function coinClick() {
 
     document.getElementById("coin").style.display = "none";
-    countAdd *= 100; 
+    countAdd *= 100;
     var outPutElement = document.getElementById("multCount");
     outPutElement.textContent = countAdd;
 
@@ -182,13 +199,13 @@ function timer() {
     let i = 10;
 
     function countdown() {
-        
-    var outPutElement = document.getElementById("alertBox");
-    outPutElement.textContent = "Boost:" + i;
+
+        var outPutElement = document.getElementById("alertBox");
+        outPutElement.textContent = "Boost:" + i;
         i--;
         if (i > 0) {
             setTimeout(countdown, 1000);
-        } 
+        }
         if (i === 0) {
             var outPutElement = document.getElementById("alertBox");
             outPutElement.textContent = "Boost Over";
@@ -205,25 +222,19 @@ function timer() {
 //mlt1
 
 function addAdd() {
-
     addAddFunction(25, 2, upgradeBut);
-
 }
 
 //mlt2
 
 function addAddDos() {
-
     addAddFunction(150, 4, upgradeBut2);
-
 }
 
 //mlt3
 
 function addAddThr() {
-
     addAddFunction(1000, 10, upgradeBut3);
-
 }
 
 //dynamic buy function
@@ -252,25 +263,15 @@ function addAddFunction(price, mlt, butId) {
 
 }
 
-//objects
-
-let objPriceOne = 50;
-let objPriceDos = 10000;
-let objPriceThr = 15000;
-
-let botCntOne = 0;
-let botCntDos = 0;
-let botCntThr = 0;
-
 //dynamic buy obj fun
 
-function buyObjFun(objPriceValue, objPriceHtmlId, addBot, rate, botCnt) {
+function buyObjFun(objPriceValue, objPriceHtmlId, addBot, rate) {
 
     if (finalCount < objPriceValue) {
         alert("Insuficient Funds");
         return objPriceValue;
-    } 
-    
+    }
+
     if (finalCount > objPriceValue) {
         //purchase/inflation function:
         finalCount -= objPriceValue;
@@ -280,21 +281,34 @@ function buyObjFun(objPriceValue, objPriceHtmlId, addBot, rate, botCnt) {
         objPriceValue = Math.ceil(objPriceValue);
         var outPutElement = document.getElementById(objPriceHtmlId);
         outPutElement.textContent = (objPriceValue);
-        setInterval(addBot, 20)
+        setInterval(addBot, 20);
         rateValue += rate;
         var outPutElement = document.getElementById("rate");
-        outPutElement.textContent = (rateValue)
-        //fix this lil bro it no no wanna wrk
-        botCnt += 1;
+        outPutElement.textContent = (rateValue);
         return objPriceValue;
     }
 
 }
 
+function botRestore(objPriceValue, objPriceHtmlId, addBot, rate, botCnt) {
+    for (var i = 1; i <= botCnt; i++)
+        objPriceValue *= 1.2;
+        objPriceValue = Math.ceil(objPriceValue);
+        var outPutElement = document.getElementById(objPriceHtmlId);
+        outPutElement.textContent = (objPriceValue);
+        setInterval(addBot, 20);
+        rateValue += rate;
+        var outPutElement = document.getElementById("rate");
+        outPutElement.textContent = (rateValue);
+        console.log("1");
+        return objPriceValue;
+}
+
 //obj1
 
 function buyObj() {
-    objPriceOne = buyObjFun(objPriceOne, "objPriceValueOne", buyObjAdd, 50, botCntOne);
+    objPriceOne = buyObjFun(objPriceOne, "objPriceValueOne", buyObjAdd, 50);
+    botCntOne += 1;
 }
 
 
@@ -307,7 +321,8 @@ function buyObjAdd() {
 //obj2
 
 function buyObjDos() {
-    objPriceDos = buyObjFun(objPriceDos, "objPriceValueDos", buyObjAddDos, 100, botCntDos);
+    objPriceDos = buyObjFun(objPriceDos, "objPriceValueDos", buyObjAddDos, 100);
+    botCntDos += 1;
 }
 
 
@@ -320,7 +335,8 @@ function buyObjAddDos() {
 //obj3
 
 function buyObjThr() {
-    objPriceThr = buyObjFun(objPriceThr, "objPriceValueThr", buyObjAddThr, 1000, botCntThr);
+    objPriceThr = buyObjFun(objPriceThr, "objPriceValueThr", buyObjAddThr, 1000);
+    botCntThr += 1;
 }
 
 function buyObjAddThr() {
