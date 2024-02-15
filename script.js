@@ -125,16 +125,32 @@ function restore() {
 
 
     //restore bots
-    //let bot1count = get
-
     let botCntOne = localStorage.getItem('bot1count');
     botCntOne = parseInt(botCntOne);
-    console.log(botCntOne);
-
+    let botCntDos = localStorage.getItem('bot2count');
+    botCntDos = parseInt(botCntDos);
+    let botCntThr = localStorage.getItem('bot3count');
+    botCntThr = parseInt(botCntThr);
     objPriceOne = botRestore(objPriceOne, "objPriceValueOne", buyObjAdd, 50, botCntOne);
+    objPriceDos = botRestore(objPriceDos, "objPriceValueDos", buyObjAddDos, 100, botCntDos);
+    objPriceThr = botRestore(objPriceThr, "objPriceValueThr", buyObjAddThr, 1000, botCntThr);
     return rateValue;
+
 }
 
+function botRestore(objPriceValue, objPriceHtmlId, addBot, rate, botCnt) {
+    for (var i = 1; i <= botCnt; i++) {
+        objPriceValue *= 1.2;
+        objPriceValue = Math.ceil(objPriceValue);
+        var outPutElement = document.getElementById(objPriceHtmlId);
+        outPutElement.textContent = (objPriceValue);
+        setInterval(addBot, 20);
+        rateValue += rate;
+        var outPutElement = document.getElementById("rate");
+        outPutElement.textContent = (rateValue);
+    }
+    return objPriceValue;
+}
 //reset
 
 function reset() {
@@ -290,19 +306,6 @@ function buyObjFun(objPriceValue, objPriceHtmlId, addBot, rate) {
 
 }
 
-function botRestore(objPriceValue, objPriceHtmlId, addBot, rate, botCnt) {
-    for (var i = 1; i <= botCnt; i++)
-        objPriceValue *= 1.2;
-        objPriceValue = Math.ceil(objPriceValue);
-        var outPutElement = document.getElementById(objPriceHtmlId);
-        outPutElement.textContent = (objPriceValue);
-        setInterval(addBot, 20);
-        rateValue += rate;
-        var outPutElement = document.getElementById("rate");
-        outPutElement.textContent = (rateValue);
-        console.log("1");
-        return objPriceValue;
-}
 
 //obj1
 
