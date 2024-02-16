@@ -313,8 +313,6 @@ function buyObj() {
     objPriceOne = buyObjFun(objPriceOne, "objPriceValueOne", buyObjAdd, 50);
     botCntOne += 1;
 }
-
-
 function buyObjAdd() {
     finalCount += 1;
     var outPutElement = document.getElementById("final");
@@ -327,8 +325,6 @@ function buyObjDos() {
     objPriceDos = buyObjFun(objPriceDos, "objPriceValueDos", buyObjAddDos, 100);
     botCntDos += 1;
 }
-
-
 function buyObjAddDos() {
     finalCount += 2;
     var outPutElement = document.getElementById("final");
@@ -341,7 +337,6 @@ function buyObjThr() {
     objPriceThr = buyObjFun(objPriceThr, "objPriceValueThr", buyObjAddThr, 1000);
     botCntThr += 1;
 }
-
 function buyObjAddThr() {
     finalCount += 20;
     var outPutElement = document.getElementById("final");
