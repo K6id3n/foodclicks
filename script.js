@@ -131,14 +131,15 @@ function restore() {
     objPriceOne = botRestore(objPriceOne, "objPriceValueOne", buyObjAdd, 50, botCntOne);
     objPriceDos = botRestore(objPriceDos, "objPriceValueDos", buyObjAddDos, 100, botCntDos);
     objPriceThr = botRestore(objPriceThr, "objPriceValueThr", buyObjAddThr, 1000, botCntThr);
-    mltPurch = localStorage.getItem('multiplier1');
-    mltDosPurch = localStorage.getItem('multiplier2');
-    mltThrPurch = localStorage.getItem('multiplier3');
-    //CONVERT TO BOOLEAN
+    let mltPurchStr = localStorage.getItem('multiplier1');
+    mltPurch = !!mltPurchStr;
+    let mltDosPurchStr = localStorage.getItem('multiplier2');
+    mltDosPurch = !!mltDosPurchStr;
+    let mltThrPurchStr = localStorage.getItem('multiplier3');
+    mltThrPurch = !!mltThrPurchStr;
+    //fix this all come out as true?? i think that might be the problem 
     if (mltPurch == true) {
-        console.log('test');
         mltRestore(upgradeBut, 2);
-        console.log
     }
     if (mltDosPurch == true) {
         mltRestore(upgradeBut2, 4);
