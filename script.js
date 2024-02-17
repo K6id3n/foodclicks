@@ -18,16 +18,13 @@ let mltPurch = false;
 let mltDosPurch = false;
 let mltThrPurch = false;
 
+let clickAmt = 0;
+
 function addCount() {
-
-
     finalCount += countAdd;
-
-    //for debug
-    //finalCount += 999;
-
     var outPutElement = document.getElementById("final");
     outPutElement.textContent = (finalCount);
+    clickAmt += 1;
 }
 
 //notes
@@ -36,11 +33,24 @@ function addCount() {
 
 //achivements
 
+function achivementsClicks() {
+    if (clickAmt == 500) {
+        countAdd *= 10;
+        clearInterval(achivementsClicks);
+        var outPutElement = document.getElementById("multCount");
+        outPutElement.textContent = (countAdd);
+    }
+    
+}
+
+setInterval(achivementsClicks, 100);
+
 function achivementsOneMillion() {
 
     if (finalCount >= 1000000) {
 
-        alert("Congrats on one million!");
+        var outPutElement = document.getElementById("alertBox");
+        outPutElement.textContent = "congrats on one million!";
         clearInterval(milInterval);
         var outPutElement = document.getElementById("oneMil");
         outPutElement.textContent = ("One Million")
@@ -54,7 +64,6 @@ function achivementsOneMillion() {
         outPutElement.textContent = (rateValue);
 
     }
-
 }
 
 function oneMilObj() {
@@ -65,7 +74,7 @@ function oneMilObj() {
 
 }
 
-const milInterval = setInterval(achivementsOneMillion, 100)
+const milInterval = setInterval(achivementsOneMillion, 100);
 
 //save/restore 
 
@@ -89,6 +98,10 @@ function save() {
     localStorage.setItem('multiplier2', mltString2);
     let mltString3 = mltThrPurch.toString();
     localStorage.setItem('multiplier3', mltString3);
+    let clickAmtStr = clickAmt.toString();
+    localStorage.setItem('Clicks', clickAmtStr);
+    var outPutElement = document.getElementById("alertBox");
+    outPutElement.textContent = "Saved!";
     console.log('saved!');
     console.log("items saved: balence:$" + finalCountString + " rate:$" + rateValueString + " bots1:" + botCntOneString + " bots2:" + botCntDosString + " bots3:" + botCntThrString);
     console.log("time saved: ", timeSavedStr);
@@ -118,6 +131,8 @@ function restore() {
     botCntDosRes = parseInt(botCntDosRes);
     let botCntThrRes = localStorage.getItem('bot3count');
     botCntThrRes = parseInt(botCntThrRes);
+    let clickAmtStr = localStorage.getItem('Clicks');
+    clickAmt = parseInt(clickAmtStr);
     botCntOne = botCntOneRes;
     botCntDos = botCntDosRes;
     botCntThr = botCntThrRes;
@@ -125,6 +140,7 @@ function restore() {
     clearInterval(buyObjAddDos);
     clearInterval(buyObjAddThr);
     rateValue = 0;
+    countAdd = 1;
     objPriceOne = 50;
     objPriceDos = 10000;
     objPriceThr = 15000;
@@ -132,12 +148,11 @@ function restore() {
     objPriceDos = botRestore(objPriceDos, "objPriceValueDos", buyObjAddDos, 100, botCntDos);
     objPriceThr = botRestore(objPriceThr, "objPriceValueThr", buyObjAddThr, 1000, botCntThr);
     let mltPurchStr = localStorage.getItem('multiplier1');
-    mltPurch = !!mltPurchStr;
+    mltPurch = strToBoolean(mltPurchStr);
     let mltDosPurchStr = localStorage.getItem('multiplier2');
-    mltDosPurch = !!mltDosPurchStr;
+    mltDosPurch = strToBoolean(mltDosPurchStr);
     let mltThrPurchStr = localStorage.getItem('multiplier3');
-    mltThrPurch = !!mltThrPurchStr;
-    //fix this all come out as true?? i think that might be the problem 
+    mltThrPurch = strToBoolean(mltThrPurchStr);
     if (mltPurch == true) {
         mltRestore(upgradeBut, 2);
     }
@@ -148,6 +163,16 @@ function restore() {
         mltRestore(upgradeBut3, 10);
     }
     return rateValue;
+}
+
+function strToBoolean(string) {
+    if (string === "true") {
+        string = true;
+        return string;
+    } else if (string === "false") {
+        string = false;
+        return string;
+    }
 }
 
 function botRestore(objPriceValue, objPriceHtmlId, addBot, rate, botCnt) {
@@ -175,38 +200,19 @@ function mltRestore(butId, mlt) {
 //reset
 
 function reset() {
-
-    var result = confirm("Do you want to proceed?");
-    if (result) {
-        handleYes();
-    }
-
-}
-
-function handleYes() {
-
     location.reload();
-
 }
 
 //tempmultiplier
 
 
 function coinShow() {
-
     document.getElementById("coin").style.display = "flex";
-
     clearInterval(coinInterval);
-
-
     function coinHide() {
-
         document.getElementById("coin").style.display = "none";
-
     }
-
     setTimeout(coinHide, 5000)
-
 }
 
 let coinInterval = setInterval(coinShow, 90000)
