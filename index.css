@@ -1,443 +1,170 @@
-.hide{
-
-    display: none;
-
-}
-
-.coin{
-
-    border: 10px solid black;
-    border-radius: 10px;
-    display: none;
-
-}
-
-body{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-
-}
-
-.dropbut{
-
-    height: 90%;
+body {
     margin: 0%;
-    margin-top: 3%;
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-    cursor: pointer;
-    padding-right: 4dvw;
-
+    background-color: rgba(229, 159, 84, 1);
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.dropdnbut{
-
-    border-radius: 10px;
-    height: 10dvh;
-
+h1 {
+    margin: 0%;
+    font-size: 300%;
+    padding-left: 1%;
+    color: rgba(47, 27, 13, 1);
 }
 
-.dropcont{
+h2 {
+    color: rgba(47, 27, 13, 1);
+    font-size: 300%;
+    margin: 0%;
+}
 
+.sectors {
+    display: flex;
+    flex-direction: row;
+    height: 92dvh;
+}
+
+.hide {
+    display: none;
+}
+
+/* navbar */
+
+.navWrapper {
+    background-color: rgba(71, 41, 20, 1);
+    height: 8dvh;
+    border-radius: 13px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(156, 96, 56, 1);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* navbar dropdown: */
+
+.dropbtn {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(241, 241, 241, 0);
+    padding-right: 3dvw;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
-    z-index: 1;
-
 }
 
-.dropdn:hover .dropcont {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: rgb(53, 53, 53);
-    border: 10px solid black;
-    border-radius: 10px;
-}
-
-.dropcont a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropcont a {
+.dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-
-nav{
-
-    background-color: black;
-    width: 100%;
-    color: white;
+.dropdown:hover .dropdown-content {
     display: flex;
-    justify-content: space-between;
-
-}
-
-.newsrow{
-
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    width: 40dvw;
-
+    height: 15dvh;
 }
 
-.ratext{
-
-    margin: 0.5dvh;
-    margin-right: 0%;
-    margin-left: 0%;
-
-}
-
-.ratdol{
-
-    display: flex;
-    flex-direction: row;
-
-}
-
-button{
-
-    color: white;
-    background-color: rgba(0, 0, 0, 0.548);
-
-}
-
-.addbut{
-
-    height: 100%;
-    font-size: 500%;
-
-}
-
-.alert{
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 10px solid black;
-    border-radius: 10px;
-    width: 10dvw;
-    height: 20dvh;
-    font-size: x-large;
-    margin-top: 5dvh;
-    text-align: center;
-
-}
-
-.alertext{
-
-    margin: 0%;
-
-}
-
-h1{
-
-    padding-left: 1dvw;
-
-}
-
-.toprow{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 50dvw;
-    margin-top: 1dvh;
-
-}
-
-.mltcounter{
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 10px solid black;
-    border-radius: 10px;
-    width: 10dvw;
-    height: 20dvh;
-    font-size: x-large;
-
-}  
-
-.mltcont{
-
-    display: flex;
-    flex-direction: row;
-
-}
-
-.multiboxh{
-
-    margin: 0%;
-
-}
-
-.botcont{
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 10px solid black;
-    border-radius: 10px;
-    width: 10dvw;
-    height: 20dvh;
-
-}
-
-.botcounter{
-
-    display: flex;
-    flex-direction: row;
-
-}
-
-.balancecont{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: xx-large;
-    border: 10px solid black;
-    border-radius: 10px;
-    width: 49dvw;
-    margin-top: 1dvh;
-
-}
-
-.balance{
-
-    margin-top: 1dvh;
-    margin-bottom: 1dvh;
-
-}
-
-.counter{
-
-    border: 10px solid black;
-    border-radius: 10px;
-    width: 20dvw;
-    height: 20dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 1dvh;
-
-}
-
-button{
-
+.dropdnbut {
+    background-color: rgba(199, 124, 74, 1);
+    border: 0.5dvw solid rgba(71, 41, 20, 1);
+    font-family: "Itim", cursive;
+    border-radius: 1dvw;
+    width: 5dvw;
+    font-weight: 400;
+    font-style: normal;
     font-size: large;
-    margin: .5dvw;
-
 }
 
-.mbrow{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 59.6dvw;
-
+.dropdnbut:hover {
+    cursor: pointer;
+    background-color: rgb(172, 107, 64);
 }
 
-.mlt{
-
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-    width: 20dvw;
-    height: 15dvh;
-    border: 10px solid black;
-    border-radius: 10px;
+.dropdnbut:active {
+    background-color: rgb(121, 75, 45);
 }
 
-.bots{
+/* sector1 */
 
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
-    width: 20dvw;
-    height: 15dvh;
-    border: 10px solid black;
-    border-radius: 10px;
-
-}
-
-.price {
-
-    margin: 0px;
-
-}
-
-.botbut{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-}
-
-.achievements{
-
+.sector1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 33.3%;
+    border-right: 0.8dvw solid rgba(71, 41, 20, 1);
+}
+
+/* sector1 balence */
+
+.balancecont {
+    display: flex;
+    justify-content: center;
+}
+
+/* filler for cappy */
+
+.cappyvisual {
+    height: 40dvh;
+}
+
+/* sector1 jump button */
+
+.addbut {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(47, 27, 13, 1);
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-size: 350%;
+    border: rgba(255, 255, 255, 0);    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(199, 124, 74, 1);
+    border: 0.5dvw solid rgba(71, 41, 20, 1);
+    border-radius: 30px;
+    height: 10dvh;
+    width: 23dvw;
+}
+
+.addbut:active {
+    background-color: rgb(170, 107, 65)
+}
+
+/* sector1 mlt buttons */
+
+.mlt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30dvh;
+}
+
+.mltbut {
+    background-color: rgba(214, 144, 71, 1);
+    border: 0.5dvw solid rgba(71, 41, 20, 1);
+    border-radius: 30px;
+    height: 8dvh;
     width: 20dvw;
-    height: 15dvh;
-    border: 10px solid black;
-    border-radius: 10px;
-    margin-top: 1dvh;
-
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-size: 200%;
+    color: rgba(47, 27, 13, 1);
 }
 
-footer{
-
-    margin-top: 10dvh;
-
-}
-
-@media only screen and (max-width: 768px) {
-
-    .alert{
-
-        width: 45%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding-top: 5%;
-
-    }
-
-    .alertext{
-
-        font-size: x-large;
-
-    }
-
-    h2{
-
-        font-size: small;
-
-    }
-
-    .balance{
-
-        font-size: x-large;
-
-    }
-
-    .balancecont{
-
-        width: 85%;
-
-    }
-
-    .addbut{
-
-        font-size: x-large;
-        height: 25dvh;
-
-    }
-
-    .counter{
-
-        height: 31dvh;
-
-    }
-
-    button{
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: small;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.548);
-        height: 50%;
-        touch-action: manipulation;
-
-    }
-
-    .toprow{
-
-        width: 90%;
-
-    }
-
-    .mltcounter{
-
-        width: 20%;
-        padding: 5%;
-        height: 25dvh;
-
-    }
-
-    .multiboxh{
-
-        font-size: large;
-
-    }
-
-    .botcont{
-
-        width: 20%;
-        padding: 5%;
-        height: 25dvh;
-
-    }
-
-    .mbrow{
-
-        width: 90%;
-        display: flex;
-        justify-content: space-between;
-
-    }
-
-    .bots{
-
-        display: flex;
-        width: 38dvw;
-        height: 35dvh;
-        margin-top: 1dvh;
-        
-    }
-
-    .mlt{
-
-        display: flex;
-        width: 38dvw;
-        height: 35dvh;
-        margin-top: 1dvh;
-
-    }
-
-    .achievements{
-
-        width: 85%;
-
-    }
-
-    .newsrow{
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 88%;
-    
-    }
-
+.mltbut:hover {
+    background-color: rgb(190, 130, 65);
 }
