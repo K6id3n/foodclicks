@@ -167,7 +167,7 @@ h2 {
     background-color: rgba(71, 41, 20, 1);
     height: 8dvh;
     border-radius: 13px;
-    height: 15dvh;
+    height: 18dvh;
 }
 
 nav {
@@ -241,6 +241,7 @@ nav {
     align-items: center;
     border-bottom: 3dvw solid rgba(71, 41, 20, 1);
     width: 100%;
+    margin-top: 1dvh;
 }
 
 /* balence */
@@ -279,7 +280,8 @@ nav {
     height: 10dvh;
     font-family: "Itim", cursive;
     font-size: 300%;
-    color: rgba(71, 41, 20, 1);;
+    color: rgba(71, 41, 20, 1);
+    touch-action: manipulation;
 }
 
 .achievements {
@@ -295,13 +297,14 @@ nav {
 .mlt {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .mltbut {
     background-color: rgba(214, 144, 71, 1);
     border: 3dvw solid rgba(71, 41, 20, 1);
     border-radius: 30px;
-    height: 8dvh;
+    height: 10dvh;
     width: 90dvw;
     font-family: "Itim", cursive;
     font-weight: 400;
@@ -317,7 +320,7 @@ nav {
     background-color: rgba(214, 144, 71, 1);
     border: 3dvw solid rgba(71, 41, 20, 1);
     border-radius: 30px;
-    height: 10dvh;
+    height: 12dvh;
     width: 90dvw;
     font-family: "Itim", cursive;
     font-weight: 400;
