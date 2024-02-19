@@ -1,0 +1,338 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    background-color: rgba(229, 159, 84, 1);
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    margin: 0%;
+    font-size: 300%;
+    padding-left: 1%;
+    color: rgba(47, 27, 13, 1);
+}
+
+h2 {
+    color: rgba(71, 41, 20, 1);;
+    font-size: 300%;
+    margin: 0%;
+}
+
+/* navbar */
+
+.navWrapper {
+    background-color: rgba(71, 41, 20, 1);
+    height: 8dvh;
+    border-radius: 13px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(156, 96, 56, 1);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* navbar dropdown: */
+
+.dropbtn {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(241, 241, 241, 0);
+    padding-right: 3dvw;
+    width: fit-content;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 15dvh;
+}
+
+.dropdnbut {
+    background-color: rgba(199, 124, 74, 1);
+    border: 0.5dvw solid rgba(71, 41, 20, 1);
+    font-family: "Itim", cursive;
+    border-radius: 1dvw;
+    width: 5dvw;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+    margin: 1px;
+}
+
+.dropdnbut:hover {
+    cursor: pointer;
+    background-color: rgb(172, 107, 64);
+}
+
+.dropdnbut:active {
+    background-color: rgb(121, 75, 45);
+}
+
+/* play section */
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.playbuts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    margin-top: 10%;
+}
+
+.button {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(47, 27, 13, 1);
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-size: 300%;
+    border: rgba(255, 255, 255, 0);    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(199, 124, 74, 1);
+    border: 0.5dvw solid rgba(71, 41, 20, 1);
+    border-radius: 30px;
+    height: 8dvh;
+    width: 20dvw;
+    margin: 1dvh;
+}
+
+.butimg {
+    width: 40%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mobile {
+    display: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    background-color: rgba(229, 159, 84, 1);
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    margin: 0%;
+    font-size: 300%;
+    padding-left: 1%;
+    color: rgba(47, 27, 13, 1);
+}
+
+h2 {
+    color: rgba(71, 41, 20, 1);
+    font-size: 300%;
+    margin: 0%;
+}
+
+/* navbar */
+
+.navWrapper {
+    background-color: rgba(71, 41, 20, 1);
+    height: 8dvh;
+    border-radius: 13px;
+    height: 15dvh;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(156, 96, 56, 1);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* navbar dropdown: */
+
+.dropbtn {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(241, 241, 241, 0);
+    padding-right: 3dvw;
+    width: fit-content;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 15dvh;
+}
+
+.dropdnbut {
+    background-color: rgba(199, 124, 74, 1);
+    border: 0.5dvw solid rgba(71, 41, 20, 1);
+    font-family: "Itim", cursive;
+    border-radius: 1dvw;
+    width: 5dvw;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+    margin: 1px;
+}
+
+.dropdnbut:hover {
+    cursor: pointer;
+    background-color: rgb(172, 107, 64);
+}
+
+.dropdnbut:active {
+    background-color: rgb(121, 75, 45);
+}
+
+/* alert */
+
+.alert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 3dvw solid rgba(71, 41, 20, 1);
+    width: 100%;
+}
+
+/* balence */
+
+.balancesect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.balancecont {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(199, 124, 74, 1);
+    border: 3dvw solid rgba(71, 41, 20, 1);
+    border-radius: 15px;
+    width: 80dvw;
+}
+
+/* rate */
+
+.ratdol {
+    display: flex;
+    justify-content: center;
+}
+
+/* click */
+
+.addbut {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(199, 124, 74, 1);
+    border: 3dvw solid rgba(71, 41, 20, 1);
+    border-radius: 15px;
+    width: 80dvw;
+    height: 10dvh;
+    font-family: "Itim", cursive;
+    font-size: 300%;
+    color: rgba(71, 41, 20, 1);;
+}
+
+.achievements {
+    display: none   ;
+}
+
+.upgrades {
+    display: none   ;
+}
+
+/* multipliers */
+
+.mlt {
+    display: flex;
+    flex-direction: column;
+}
+
+.mltbut {
+    background-color: rgba(214, 144, 71, 1);
+    border: 3dvw solid rgba(71, 41, 20, 1);
+    border-radius: 30px;
+    height: 8dvh;
+    width: 90dvw;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-size: 180%;
+    color: rgba(47, 27, 13, 1);
+    margin-top: 1dvh;
+}
+
+.botbut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(214, 144, 71, 1);
+    border: 3dvw solid rgba(71, 41, 20, 1);
+    border-radius: 30px;
+    height: 10dvh;
+    width: 90dvw;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-size: 180%;
+    color: rgba(47, 27, 13, 1);
+    margin-top: 1dvh;
+}
+
+/* news */
+
+.gamedevnews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 3dvw solid rgba(71, 41, 20, 1);
+    width: 100%;
+    margin-top: 1dvh;
+}
