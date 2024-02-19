@@ -118,14 +118,12 @@ function save() {
     localStorage.setItem('bot2count', botCntDosString);
     let botCntThrString = botCntThr.toString();
     localStorage.setItem('bot3count', botCntThrString);
-
     let botCntForString = botCntFor.toString();
     localStorage.setItem('bot4count', botCntForString);
     let botCntFivString = botCntFiv.toString();
     localStorage.setItem('bot5count', botCntFivString);
     let botCntSixString = botCntSix.toString();
     localStorage.setItem('bot6count', botCntSixString);
-    
     let mltString1 = mltPurch.toString();
     localStorage.setItem('multiplier1', mltString1);
     let mltString2 = mltDosPurch.toString();

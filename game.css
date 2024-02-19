@@ -1,0 +1,332 @@
+body {
+    margin: 0%;
+    background-color: rgba(229, 159, 84, 1);
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    margin: 0%;
+    font-size: 300%;
+    padding-left: 1%;
+    color: rgba(47, 27, 13, 1);
+}
+
+h2 {
+    color: rgba(71, 41, 20, 1);;
+    font-size: 300%;
+    margin: 0%;
+}
+
+.sectors {
+    display: flex;
+    flex-direction: row;
+    height: 92dvh;
+}
+
+.hide {
+    display: none;
+}
+
+/* navbar */
+
+.navWrapper {
+    background-color: rgba(71, 41, 20, 1);
+    height: 8dvh;
+    border-radius: 13px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(156, 96, 56, 1);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* navbar dropdown: */
+
+.dropbtn {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(241, 241, 241, 0);
+    padding-right: 3dvw;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 15dvh;
+}
+
+.dropdnbut {
+    background-color: rgba(199, 124, 74, 1);
+    border: 0.5dvw solid rgba(71, 41, 20, 1);
+    font-family: "Itim", cursive;
+    border-radius: 1dvw;
+    width: 5dvw;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+}
+
+.dropdnbut:hover {
+    cursor: pointer;
+    background-color: rgb(172, 107, 64);
+}
+
+.dropdnbut:active {
+    background-color: rgb(121, 75, 45);
+}
+
+/* sector1 */
+
+.sector1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    border-right: 0.8dvw solid rgba(71, 41, 20, 1);
+}
+
+/* sector1 balence */
+
+.balancecont {
+    display: flex;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(199, 124, 74, 1);
+    border: 0.5dvw solid rgba(71, 41, 20, 1);
+    border-radius: 30px;
+    height: 5dvh;
+    width: 23dvw;
+}
+
+.balancesect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ratext {
+    margin-bottom: .5dvh;
+    margin-top: .5dvh;
+}
+
+.ratdol {
+    display: flex;
+    justify-content: center;
+}
+
+/* filler for cappy */
+
+.cappyvisual {
+    height: 40dvh;
+}
+
+#capy {
+    width: 100%;
+}
+
+/* sector1 jump button */
+
+.addbut {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(47, 27, 13, 1);
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-size: 300%;
+    border: rgba(255, 255, 255, 0);    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(199, 124, 74, 1);
+    border: 0.5dvw solid rgba(71, 41, 20, 1);
+    border-radius: 30px;
+    height: 8dvh;
+    width: 20dvw;
+}
+
+.addbut:active {
+    background-color: rgb(170, 107, 65)
+}
+
+/* sector1 mlt buttons */
+
+.mlt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30dvh;
+}
+
+.mltbut {
+    background-color: rgba(214, 144, 71, 1);
+    border: 0.5dvw solid rgba(71, 41, 20, 1);
+    border-radius: 30px;
+    height: 8dvh;
+    width: 17dvw;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-size: 180%;
+    color: rgba(47, 27, 13, 1);
+}
+
+.mltbut:hover {
+    background-color: rgb(190, 130, 65);
+}
+
+/* sector2 */
+
+.sector2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+/* sector2 News */
+
+.alert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom:  0.8dvw solid rgba(71, 41, 20, 1);
+    padding: .5dvw;
+}
+
+.alertext {
+    color:rgb(54, 32, 16);
+    font-size: x-large;
+    margin: .5dvw;
+}
+
+/* sector2 legacy counts */
+
+.legacycounts {
+    display: flex;
+    height: 10dvh;
+    font-size: x-small;
+}
+
+.mltcont {
+    display: flex;
+}
+
+.countgrid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* sector2 upgrades */
+
+.upgrades {
+    display: flex;
+    border-top:  0.8dvw solid rgba(71, 41, 20, 1);
+}
+
+.upgradesector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 35dvh;
+}
+
+.clickupgrade {
+    border-right:  0.5dvw solid rgba(71, 41, 20, 1);
+}
+
+.legacyupgrades {
+    border-left:  0.5dvw solid rgba(71, 41, 20, 1);
+}
+
+/* sector2 acheivements */
+
+.achievements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top:  0.8dvw solid rgba(71, 41, 20, 1);
+    border-bottom:  0.8dvw solid rgba(71, 41, 20, 1);
+    height: 12dvh;
+}
+
+.achbigtext {
+    font-size: x-large;
+}
+
+/* sector2 gamedev news */
+
+.gamedevnews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.gamedevbigtext {
+    font-size: x-large;
+    padding: 1%;
+}
+
+.gitlogo {
+    align-self: flex-end;
+    justify-self: flex-start;
+}
+
+/* sector3 */
+
+.sector3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 25%;
+    border-left: 0.8dvw solid rgba(71, 41, 20, 1);
+}
+
+/* sector3 buttons */
+
+.botbut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(214, 144, 71, 1);
+    border: 0.5dvw solid rgba(71, 41, 20, 1);
+    border-radius: 30px;
+    height: 12dvh;
+    width: 20dvw;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-size: 200%;
+    color: rgba(47, 27, 13, 1);
+}
+
+.botbut:hover {
+    background-color: rgb(190, 130, 65);
+}
