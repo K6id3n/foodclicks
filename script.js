@@ -9,10 +9,16 @@ let rateValue = 0;
 let objPriceOne = 50;
 let objPriceDos = 10000;
 let objPriceThr = 15000;
+let objPriceFor = 100000;
+let objPriceFiv = 15000000;
+let objPriceSix = 100000000;
 
 let botCntOne = 0;
 let botCntDos = 0;
 let botCntThr = 0;
+let botCntFor = 0;
+let botCntFiv = 0;
+let botCntSix = 0;
 
 let mltPurch = false;
 let mltDosPurch = false;
@@ -25,6 +31,26 @@ function addCount() {
     var outPutElement = document.getElementById("final");
     outPutElement.textContent = (finalCount);
     clickAmt += 1;
+    capyVisual1();
+}
+
+function capyVisual1() {
+    var image = document.getElementById('capy');
+    if (image.src.match("cappydown.png")) {
+      image.src = "cappyup.png";
+    } else {
+      image.src = "cappydown.png";
+    }
+    setTimeout(capyVisual2, 200); 
+}
+
+function capyVisual2() {
+    var image = document.getElementById('capy');
+    if (image.src.match("cappyup.png")) {
+      image.src = "cappydown.png";
+    } else {
+      image.src = "cappyup.png";
+    }
 }
 
 //notes
@@ -92,6 +118,14 @@ function save() {
     localStorage.setItem('bot2count', botCntDosString);
     let botCntThrString = botCntThr.toString();
     localStorage.setItem('bot3count', botCntThrString);
+
+    let botCntForString = botCntFor.toString();
+    localStorage.setItem('bot4count', botCntForString);
+    let botCntFivString = botCntFiv.toString();
+    localStorage.setItem('bot5count', botCntFivString);
+    let botCntSixString = botCntSix.toString();
+    localStorage.setItem('bot6count', botCntSixString);
+    
     let mltString1 = mltPurch.toString();
     localStorage.setItem('multiplier1', mltString1);
     let mltString2 = mltDosPurch.toString();
@@ -103,7 +137,7 @@ function save() {
     var outPutElement = document.getElementById("alertBox");
     outPutElement.textContent = "Saved!";
     console.log('saved!');
-    console.log("items saved: balence:$" + finalCountString + " rate:$" + rateValueString + " bots1:" + botCntOneString + " bots2:" + botCntDosString + " bots3:" + botCntThrString);
+    console.log("items saved: balence:$" + finalCountString + " rate:$" + rateValueString + " bots1:" + botCntOneString + " bots2:" + botCntDosString + " bots3:" + botCntThrString + " bots4:" + botCntForString + " bots5:" + botCntFivString + " bots6:" + botCntSixString);
     console.log("time saved: ", timeSavedStr);
 }
 
@@ -131,22 +165,40 @@ function restore() {
     botCntDosRes = parseInt(botCntDosRes);
     let botCntThrRes = localStorage.getItem('bot3count');
     botCntThrRes = parseInt(botCntThrRes);
+    let botCntForRes = localStorage.getItem('bot4count');
+    botCntForRes = parseInt(botCntForRes);
+    let botCntFivRes = localStorage.getItem('bot5count');
+    botCntFivRes = parseInt(botCntFivRes);
+    let botCntSixRes = localStorage.getItem('bot6count');
+    botCntSixRes = parseInt(botCntSixRes);
     let clickAmtStr = localStorage.getItem('Clicks');
     clickAmt = parseInt(clickAmtStr);
     botCntOne = botCntOneRes;
     botCntDos = botCntDosRes;
     botCntThr = botCntThrRes;
+    botCntFor = botCntForRes;
+    botCntFiv = botCntFivRes;
+    botCntSix = botCntSixRes;
     clearInterval(buyObjAdd);
     clearInterval(buyObjAddDos);
     clearInterval(buyObjAddThr);
+    clearInterval(buyObjAddFor);
+    clearInterval(buyObjAddFiv);
+    clearInterval(buyObjAddSix);
     rateValue = 0;
     countAdd = 1;
-    objPriceOne = 50;
-    objPriceDos = 10000;
-    objPriceThr = 15000;
+    let objPriceOne = 50;
+    let objPriceDos = 10000;
+    let objPriceThr = 15000;
+    let objPriceFor = 100000;
+    let objPriceFiv = 15000000;
+    let objPriceSix = 100000000;
     objPriceOne = botRestore(objPriceOne, "objPriceValueOne", buyObjAdd, 50, botCntOne);
     objPriceDos = botRestore(objPriceDos, "objPriceValueDos", buyObjAddDos, 100, botCntDos);
     objPriceThr = botRestore(objPriceThr, "objPriceValueThr", buyObjAddThr, 1000, botCntThr);
+    objPriceFor = botRestore(objPriceFor, "objPriceValueFor", buyObjAddFor, 5000, botCntFor);
+    objPriceFiv = botRestore(objPriceFiv, "objPriceValueFiv", buyObjAddFiv, 50000, botCntFiv);
+    objPriceSix = botRestore(objPriceSix, "objPriceValueSix", buyObjAddSix, 5000000, botCntSix);
     let mltPurchStr = localStorage.getItem('multiplier1');
     mltPurch = strToBoolean(mltPurchStr);
     let mltDosPurchStr = localStorage.getItem('multiplier2');
@@ -206,16 +258,16 @@ function reset() {
 //tempmultiplier
 
 
-function coinShow() {
-    document.getElementById("coin").style.display = "flex";
-    clearInterval(coinInterval);
-    function coinHide() {
-        document.getElementById("coin").style.display = "none";
-    }
-    setTimeout(coinHide, 5000)
-}
+// function coinShow() {
+//     document.getElementById("coin").style.display = "flex";
+//     clearInterval(coinInterval);
+//     function coinHide() {
+//         document.getElementById("coin").style.display = "none";
+//     }
+//     setTimeout(coinHide, 5000)
+// }
 
-let coinInterval = setInterval(coinShow, 90000)
+// let coinInterval = setInterval(coinShow, 90000)
 
 function coinClick() {
 
@@ -319,7 +371,6 @@ function buyObjFun(objPriceValue, objPriceHtmlId, addBot, rate) {
     }
 
     if (finalCount > objPriceValue) {
-        //purchase/inflation function:
         finalCount -= objPriceValue;
         var outPutElement = document.getElementById("final");
         outPutElement.textContent = (finalCount);
@@ -373,3 +424,38 @@ function buyObjAddThr() {
     outPutElement.textContent = (finalCount)
 }
 
+//obj4
+
+function buyObjFor() {
+    objPriceFor = buyObjFun(objPriceFor, "objPriceValueFor", buyObjAdd, 5000);
+    botCntFor += 1;
+}
+function buyObjAddFor() {
+    finalCount += 100   ;
+    var outPutElement = document.getElementById("final");
+    outPutElement.textContent = (finalCount)
+}
+
+//obj5
+
+function buyObjFiv() {
+    objPriceFiv = buyObjFun(objPriceFiv, "objPriceValueFiv", buyObjAddFiv, 50000);
+    botCntFiv += 1;
+}
+function buyObjAddFiv() {
+    finalCount += 1000;
+    var outPutElement = document.getElementById("final");
+    outPutElement.textContent = (finalCount)
+}
+
+//obj6
+
+function buyObjSix() {
+    objPriceSix = buyObjFun(objPriceSix, "objPriceValueSix", buyObjAddSix, 5000000);
+    botCntSix += 1;
+}
+function buyObjAddSix() {
+    finalCount += 100000;
+    var outPutElement = document.getElementById("final");
+    outPutElement.textContent = (finalCount)
+}

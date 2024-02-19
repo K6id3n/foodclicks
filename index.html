@@ -44,16 +44,26 @@
 
         <section class="sector1">
 
-            <section class="balancesect">
-                <h2>Balence</h2>
-                <section class="balancecont">
-                    <h2 class="balance">$</h2>
-                    <h2 class="balance" id="final">0</h2>
+            <section>
+                <section class="balancesect">
+                    <h2>Balence</h2>
+                    <section class="balancecont">
+                        <h2 class="balance">$</h2>
+                        <h2 class="balance" id="final">0</h2>
+                    </section>
                 </section>
+
+                <section class="ratdol">
+                    <p class="ratext">$</p>
+                    <p id="rate" class="ratext">0</p>
+                    <p class="ratext">.0 per second</p>
+                </section>
+
+
             </section>
 
             <section class="cappyvisual">
-
+                <img src="cappydown.png" alt="cappydown" id="capy">
             </section>
 
             <section class="counter">
@@ -72,101 +82,135 @@
 
         </section>
 
-        <section class="coin" id="coin">
+        <section class="sector2">
+
+            <section class="alert">
+
+                <h2>News</h2>
+                <p id="alertBox" class="alertext">Start Your Capybara Buisness</p>
+
+            </section>
+
+            <section class="legacycounts">
+
+                <section class="countgrid">
+                    <h2>Per Click</h2>
+                    <section class="mltcont">
+                        <h2 id="multCount" class="multiboxh">1</h2>
+                        <h2 class="multiboxh">x</h2>
+                    </section>
+                </section>
+
+                <section class="countgrid">
+
+                </section>
+
+            </section>
+
+            <section class="upgrades">
+
+                <section class="clickupgrade upgradesector">
+                    <h2>Clicker Upgrades</h2>
+                </section>
+
+                <section class="legacyupgrades upgradesector">
+                    <h2>Legacy Upgrades</h2>
+                </section>
+
+            </section>
+
+            <section class="achievements">
+
+                <h2 class="achbigtext">Achievements</h2>
+                <p id="oneMil"></p>
+
+            </section>
+
+            <section class="gamedevnews">
+
+                <h2 class="gamedevbigtext">Gamedev News</h2>
+                <p>Gameplay functions and styling!</p>
+
+                <section class="gitlogo">
+
+                    <a href="https://github.com/K6id3n/foodclicks"><img src="GitHub.png" alt="githublogo"></a>
+
+                </section>
+
+            </section>
+
+        </section>
+
+        <!-- <section class="coin" id="coin">
 
             <button onclick="coinClick()">Click Me!</button>
 
-        </section>
+        </section> -->
 
-        <section class="newsrow">
+        <section class="sector3">
 
-            <section class="alert">
+            <h2>Legacy</h2>
 
-                <h2 class="alertext">News</h2>
-                <p id="alertBox" class="alertext"></p>
-
-            </section>
-
-            <section class="alert">
-
-                <h2 class="alertext">Rate</h2>
-                <section class="ratdol">
-                    <p class="ratext">$</p>
-                    <p id="rate" class="ratext">0</p>
-                </section>
-                <p class="ratext">per second</p>
-
-            </section>
-
-        </section>
-
-
-        <section class="toprow">
-
-            <section class="mltcounter">
-
-                <section class="mltcont">
-                    <h2 id="multCount" class="multiboxh">1</h2>
-                    <h2 class="multiboxh">x</h2>
-                </section>
-
-                <h2 class="multiboxh">Multiplier</h2>
-
-            </section>
-
-
-
-            <section class="botcont">
-
-                <!-- think of something for this -->
-
-            </section>
-
-        </section>
-
-        <section class="mbrow">
-
-
-
-            <section class="bots">
-
-                <button onclick="buyObj()" id="botBut" class="botbut">
-                    Bot 1: price: $
+            <button onclick="buyObj()" id="botBut" class="botbut">
+                <p>More Trampolines</p> $
+                <section class="pricefull">
                     <p id="objPriceValueOne" class="price">
                         50
                     </p>
-                </button>
-                <button onclick="buyObjDos()" id="botButDos" class="botbut">
-                    Bot 2: price: $
+                </section>
+
+            </button>
+            <button onclick="buyObjDos()" id="botButDos" class="botbut">
+                <p>Better Springs</p> $
+                <section class="pricefull">
                     <p id="objPriceValueDos" class="price">
                         10000
                     </p>
-                </button>
+                </section>
 
-                <button onclick="buyObjThr()" id="botButThr" class="botbut">
-                    Bot 3: price: $
+            </button>
+
+            <button onclick="buyObjThr()" id="botButThr" class="botbut">
+                <p>Jumpy Boots</p> $
+                <section class="pricefull">
                     <p id="objPriceValueThr" class="price">
                         15000
                     </p>
-                </button>
+                </section>
 
+            </button>
 
-            </section>
+            <button onclick="buyObjFor()" id="botButFor" class="botbut">
+                <p>Supa Tramps</p> $
+                <section class="pricefull">
+                    <p id="objPriceValueFor" class="price">
+                        100000
+                    </p>
+                </section>
+
+            </button>
+
+            <button onclick="buyObjFiv()" id="botButFiv" class="botbut">
+                <p>Energy Drinks</p> $
+                <section class="pricefull">
+                    <p id="objPriceValueFiv" class="price">
+                        15000000
+                    </p>
+                </section>
+
+            </button>
+
+            <button onclick="buyObjSix()" id="botButSix" class="botbut">
+                <p>Propeller Hats</p> $
+                <section class="pricefull">
+                    <p id="objPriceValueSix" class="price">
+                        100000000
+                    </p>
+                </section>
+
+            </button>
 
         </section>
-
-        <section class="achievements">
-
-            <h2>Achievements</h2>
-            <p id="oneMil"></p>
-
-        </section>
-
-        <footer>
-
-            <a href="https://github.com/K6id3n/foodclicks"><img src="GitHub.png" alt="githublogo"></a>
-
-        </footer>
 
     </section>
 
